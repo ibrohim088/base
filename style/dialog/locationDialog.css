@@ -1,0 +1,125 @@
+.dialog_location_content {
+  margin-top: 10px;
+  border: 1px solid #0000005A;
+  border-radius: 7px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1em;
+  height: 500px;
+  transition: all .3s ease;
+}
+
+
+.dialog_location_iframe_block {
+  border: 1px solid #0000005A;
+  border-radius: 7px;
+  flex: 0 0 calc(70% - 1em);
+  height: 100%;
+  transition: flex-basis .4s ease;
+
+  iframe {
+    width: 100%;
+    height: 100%;
+    border-radius: 7px;
+    outline: none;
+    border: none;
+  }
+}
+
+
+/* form ============================================================================== */
+
+.dialog_form {
+  border: 1px solid #0000005A;
+  padding: 5px;
+  border-radius: 7px;
+  flex: 0 0 30%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: flex-basis .4s ease;
+}
+
+.dialog_form_wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+
+}
+
+.dialog_form_title {
+  text-align: center;
+  font-size: 16px;
+}
+
+.dialog_form_select {
+  width: 100%;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  padding: 10px 0px;
+  border-radius: 8px;
+  background: #f0f0f0;
+}
+
+.dialog_form_list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.dialog_form_item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.dialog_form_btn {
+  width: 100%;
+
+}
+
+
+@media(width < 1000px) {
+  .dialog_location_iframe_block {
+    flex: 0 0 calc(60% - 1em);
+  }
+
+  .dialog_form {
+    flex: 0 0 40%;
+  }
+}
+
+@media(width < 770px) {
+  .dialog_location_content {
+    height: 400px;
+  }
+}
+
+@media(width < 660px) {
+  .dialog_location_content {
+    height: 450px;
+    flex-direction: column;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #999 transparent;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .dialog_location_iframe_block {
+    width: 100%;
+  }
+
+  .dialog_form {
+    width: 100%;
+
+  }
+
+  .dialog_form_btn {
+    margin-top: 2.5em;
+  }
+}

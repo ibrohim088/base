@@ -1,0 +1,32 @@
+.empty-dialog {
+  margin: 0 auto;
+  padding: 15px;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  background: #ffffff;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  position: fixed;
+  top: 10.5%;
+
+  &::backdrop {
+    background: rgba(0, 0, 0, 0.30);
+    backdrop-filter: blur(0.1px);
+  }
+}
+
+.empty_dialog_title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.empty-dialog_close {
+  cursor: pointer;
+  padding: 5px;
+  height: 34px;
+  border-radius: 50%;
+  border: none;
+  outline: none;
+  background: none;
+}

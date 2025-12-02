@@ -1,0 +1,25 @@
+.nav_list_item_select {
+  padding: 10px;
+  background-color: #f0f0f0;
+  border: none;
+  outline: none;
+  border-radius: 8px;
+  cursor: pointer;
+  
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  
+}
+
+.nav_list_item_select:hover {
+  border-color: #888;
+}
+
+.nav_list_item_select:focus {
+  border-color: #0066cc;
+}
+
+.nav_list_item_select option {
+  padding: 10px;
+}

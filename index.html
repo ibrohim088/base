@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- UI desing -->
+  <link rel="stylesheet" href="./style/Ui/select.css">
+
+  <!-- dialog modal style import -->
+  <link rel="stylesheet" href="./style/dialog/empty-dialog.css">
+  <link rel="stylesheet" href="./style//dialog/categoryDialog.css">
+  <link rel="stylesheet" href="./style//dialog/locationDialog.css">
+  <link rel="stylesheet" href="./style/dialog/registerDialog.css">
+  <link rel="stylesheet" href="./style/dialog/logInDialog.css">
+
+  <!-- header style import -->
+  <link rel="stylesheet" href="./style/header.css">
+
+  <!-- navbar style import -->
+  <link rel="stylesheet" href="./style/navbar.css">
+
+  <!-- section style import -->
+  <link rel="stylesheet" href="./style/main.css">
+
+  <!-- footer style import -->
+  <link rel="stylesheet" href="./style/footer.css">
+
+  <!-- UI main dialog -->
+  <link rel="stylesheet" href="./style/UI/dialog.css">
+  <link rel="stylesheet" href="./index.css">
+
+  <title>ShopSamrt</title>
+</head>
+
+<style>
+
+</style>
+
+<body>
+  <header>
+    <nav>
+      <div class="nav_content container">
+        <a href="/" class="shopsmart_logo">
+          <img class="shopsmart_logo" src="./img/logo/ShopSmart_text.png" alt="">
+        </a>
+        <div class="nav_input_box">
+          <input class="input" type="text" placeholder="Search product...">
+          <img class="searchSVG_IMG" src="./img/svg/icons/search.svg" alt="">
+        </div>
+        <div class="overlay"></div>
+        <ul class="nav_list">
+          <li class="nav_list_item category_item">
+            Category
+            <img class="heartSVG_IMG" src="./img/svg/icons/layers.svg" alt="">
+          </li>
+          <li class="nav_list_item cart_item">
+            Basket
+            <img class="cartSVG_IMG" src="./img/svg/icons/cart.svg" alt="">
+          </li>
+          <li class="nav_list_item favorites_item">
+            Favorites
+            <img class="heartSVG_IMG" src="./img/svg/icons/heart.svg" alt="">
+          </li>
+          <li class="nav_list_item location_item">
+            Location
+            <img class="mapMarkerSVG_IMG" src="./img/svg/icons/mapMarker.svg" alt="">
+          </li>
+        </ul>
+        <div class="btn_wrapper">
+          <select class="nav_list_item_select language_item" name="lan" required>
+            <option value="eng">EN</option>
+            <option value="ru">RU</option>
+            <option value="uz">UZ</option>
+          </select>
+
+          <button class="nav_logIn">
+            <p>Log In</p>
+            <img class="logInSVG_IMG" src="./img/svg/icons/logIn.svg" alt="">
+          </button>
+          <button class="burgerMenu">
+            <img class="logInSVG_IMG" src="./img/svg/icons/burgerMenu.svg" alt="">
+          </button>
+        </div>
+      </div>
+
+      <!-- ===================== dialog ===================== -->
+      <!-- category dialog modal -->
+      <dialog class="category_dialog empty-dialog">
+        <div class="empty_dialog_title">
+          <h2>Category</h2>
+
+          <button class="clouseCategoryDialog empty-dialog_close">
+            <img src="./img/svg/icons/cancel.svg" alt="">
+          </button>
+        </div>
+
+        <div class="dialog_category_content">
+        </div>
+      </dialog>
+
+      <!-- Location dialog block -->
+      <dialog class="location_dialog empty-dialog">
+        <div class="empty_dialog_title">
+          <h2>Location</h2>
+          <button class="clouseLocationDialog empty-dialog_close">
+            <img src="./img/svg/icons/cancel.svg" alt="">
+          </button>
+        </div>
+
+        <div class="dialog_location_content">
+
+          <div class="dialog_location_iframe_block">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1536049.2008263702!2d69.9580706!3d41.241464650000005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38afbcaa73f2ce4d%3A0x57f19ae913e2f367!2z0KLQsNGI0LrQtdC90YLRgdC60LDRjyDQvtCx0LvQsNGB0YLRjA!5e0!3m2!1sru!2s!4v1764148943542!5m2!1sru!2s"
+              style="border:0;" allowfullscreen="" loading="fast" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+          <form class="dialog_form">
+            <div class="dialog_form_wrapper">
+              <h2 class="dialog_form_title">Select pick-up item</h2>
+              <select class="dialog_form_select" name="city" id="city">
+                <option value="sergeli">Sergeli</option>
+                <option value="yunsobot">Yunsobot</option>
+                <option value="chilonzor">Chilonzor</option>
+                <option value="yashnabod">Yashnabod</option>
+              </select>
+
+              <!-- work time -->
+              <h2 class="dialog_form_title">Work Time</h2>
+              <ul class="dialog_form_list">
+                <li class="dialog_form_item">Monday: <p>10:00 - 20:00</p>
+                </li>
+                <li class="dialog_form_item">Tuesday: <p>10:00 - 20:00</p>
+                </li>
+                <li class="dialog_form_item">Wednesday: <p>10:00 - 20:00</p>
+                </li>
+                <li class="dialog_form_item">Thursday: <p>10:00 - 20:00</p>
+                </li>
+                <li class="dialog_form_item">Friday: <p>10:00 - 20:00</p>
+                </li>
+                <li class="dialog_form_item">Saturday: <p>10:00 - 20:00</p>
+                </li>
+                <li class="dialog_form_item">Sunday: <p>10:00 - 17:00</p>
+                </li>
+              </ul>
+            </div>
+
+            <button class="dialog_form_btn empty-btn">Next</button>
+          </form>
+        </div>
+      </dialog>
+
+      <!-- logIn dialog block -->
+      <dialog class="logIn_dialog empty-dialog">
+        <div class="empty_dialog_title">
+          <h2>Log In</h2>
+          <button class="clouseLocationDialog empty-dialog_close">
+            <img src="./img/svg/icons/cancel.svg" alt="">
+          </button>
+        </div>
+
+        <form class="login_form">
+          <div class="form_group">
+            <label>Email</label>
+            <input type="email" placeholder="example@mail.com" required pattern=".+@example\.com">
+          </div>
+
+          <div class="form_group">
+            <label>Password</label>
+            <input type="password" placeholder="••••••••" required maxlength="8">
+          </div>
+
+          <button class="login_btn" type="submit">Sign In</button>
+
+          <p class="login_note">
+            Don't have an account? <a href="#logIn" class="register">Register</a>
+          </p>
+        </form>
+      </dialog>
+
+      <!-- register dialog block -->
+      <dialog class="register_dialog empty-dialog">
+        <div class="empty_dialog_title">
+          <h2>Register</h2>
+          <button class="closeRegisterDialog empty-dialog_close">
+            <img src="./img/svg/icons/cancel.svg" alt="">
+          </button>
+        </div>
+
+        <form class="register_form">
+          <div class="form_group">
+            <label>Full Name</label>
+            <input type="text" placeholder="Your name" required>
+          </div>
+
+          <div class="form_group">
+            <label>Email</label>
+            <input type="email" placeholder="example@mail.com" required>
+          </div>
+
+          <div class="form_group">
+            <label>Password</label>
+            <input type="password" placeholder="••••••••" required>
+          </div>
+
+          <div class="form_group">
+            <label>Confirm Password</label>
+            <input type="password" placeholder="••••••••" required>
+          </div>
+
+          <button class="login_btn" type="submit">Create Account</button>
+
+          <p class="login_note">
+            Already have an account? <a href="#register" class="nav_logIn">Log In</a>
+          </p>
+        </form>
+      </dialog>
+
+    </nav>
+
+    <div class="header_content container">
+      <button class="left_slide_show_arrow">
+        <img src="./img/svg/arrows/leftArrow.svg" alt="">
+      </button>
+
+      <button class="right_slide_show_arrow">
+        <img src="./img/svg/arrows/rightArrow.svg" alt="">
+      </button>
+    </div>
+  </header>
+
+  <main class="main container">
+    <section class="electronik">
+      <h1 class="electronik_content-text">Electronika</h1>
+
+
+      <ul class="electronik_list empty-product_list"></ul>
+
+    </section>
+
+    <section class="newCollection">
+
+    </section>
+
+    <section class="lowPrice">
+
+    </section>
+  </main>
+
+  <footer class="footer container">
+    <div class="footer_content">
+      <div class="footer_top_content">
+        <!-- about list -->
+        <ul class="footer_empty-list">
+          <li class="footer_empty-item">
+            <h1>About</h1>
+          </li>
+          <li class="footer_empty-item">
+            <a href="./page/about/pickupPoint.html">
+              Pickup point
+            </a>
+          </li>
+          <li class="footer_empty-item">
+            <a href="./page/about/jobOpenings.html">
+              Job openings
+            </a>
+          </li>
+        </ul>
+
+        <!-- to user list -->
+        <ul class="footer_empty-list">
+          <li class="footer_empty-item">
+            <h1>To User</h1>
+          </li>
+          <li class="footer_empty-item">
+            <a href="./page/toUser/Contact.html">
+              Contact us
+            </a>
+          </li>
+          <li class="footer_empty-item">
+            <a href="./page/toUser/Q&A.html">
+              Q & A (Question and Answers)
+            </a>
+          </li>
+        </ul>
+
+        <!-- For businesses -->
+        <ul class="footer_empty-list">
+          <li class="footer_empty-item">
+            <h1>For businesses</h1>
+          </li>
+          <li class="footer_empty-item">
+            <a href="./page/businesses/sell.html">
+              Sell on ShopSamrt
+            </a>
+          </li>
+          <li class="footer_empty-item">
+            <a href="./page/businesses/sellerLogin.html">
+              Seller login
+            </a>
+          </li>
+          <li class="footer_empty-item">
+            <a href="./page/businesses/openPoint.html">
+              Open a pickup point
+            </a>
+          </li>
+        </ul>
+
+        <!-- Download the app -->
+        <ul class="footer_empty-list">
+          <li class="footer_empty-item">
+            <h1>Download the app</h1>
+          </li>
+          <li class="footer_empty-item empty-dow">
+            <a href="./page/download/appStory.html">
+              <img src="./img/svg/download/appStory.svg" alt="">
+            </a>
+            <a href="./page/download/playMarket.html">
+              <img src="./img/svg/download/playMarket.svg" alt="">
+            </a>
+          </li>
+
+          <li class="footer_empty-item">
+            <h1>ShopSamrt on social media</h1>
+          </li>
+          <li class="footer_empty-item empty-item_social">
+            <a href="./telegram">
+              <img src="./img/svg/sochialMedia/telegram.svg" alt="">
+            </a>
+            <a href="./youtube">
+              <img src="./img/svg/sochialMedia/youtube.svg" alt="">
+            </a>
+            <a href="./instagram">
+              <img src="./img/svg/sochialMedia/instagram.svg" alt="">
+            </a>
+            <a href="./facebook">
+              <img src="./img/svg/sochialMedia/facebook.svg" alt="">
+            </a>
+          </li>
+        </ul>
+
+      </div>
+
+      <div class="footer_bottom_content">
+        <ul class="footer_bottom_list">
+          <li class="footer_bottom__list_item">
+            Privacy Policy User Agreement
+          </li>
+
+          <li class="footer_bottom__list_item">
+            «2025© OOO «ShopSmart». INN 309376127. All rights reserved»
+          </li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+</body>
+
+<script src="./main.js"></script>
+<script src="./js/navbar.js"></script>
+<script src="./js/header.js"></script>
+<script src="./js/section.js"></script>
+
+</html>
