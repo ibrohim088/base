@@ -5,33 +5,30 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- UI desing -->
-  <link rel="stylesheet" href="./style/Ui/select.css">
+  <link rel="stylesheet" href="../style/Ui/select.css">
 
   <!-- dialog modal style import -->
-  <link rel="stylesheet" href="./style/dialog/empty-dialog.css">
-  <link rel="stylesheet" href="./style//dialog/categoryDialog.css">
-  <link rel="stylesheet" href="./style//dialog/locationDialog.css">
-  <link rel="stylesheet" href="./style/dialog/registerDialog.css">
-  <link rel="stylesheet" href="./style/dialog/logInDialog.css">
+  <link rel="stylesheet" href="../style/dialog/empty-dialog.css">
+  <link rel="stylesheet" href="../style//dialog/categoryDialog.css">
+  <link rel="stylesheet" href="../style//dialog/locationDialog.css">
+  <link rel="stylesheet" href="../style/dialog/registerDialog.css">
+  <link rel="stylesheet" href="../style/dialog/logInDialog.css">
 
   <!-- header style import -->
-  <link rel="stylesheet" href="./style/header.css">
+  <link rel="stylesheet" href="../style/header.css">
 
   <!-- navbar style import -->
-  <link rel="stylesheet" href="./style/navbar.css">
+  <link rel="stylesheet" href="../style/navbar.css">
 
   <!-- section style import -->
-  <link rel="stylesheet" href="./style/main.css">
+  <link rel="stylesheet" href="../style/main.css">
 
   <!-- footer style import -->
-  <link rel="stylesheet" href="./style/footer.css">
+  <link rel="stylesheet" href="../style/footer.css">
 
   <!-- UI main dialog -->
-  <link rel="stylesheet" href="./style/UI/dialog.css">
-  <link rel="stylesheet" href="./index.css">
-
-  <!-- slick slider link style -->
-  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+  <link rel="stylesheet" href="../style/UI/dialog.css">
+  <link rel="stylesheet" href="../index.css">
 
   <title>ShopSamrt</title>
 </head>
@@ -45,29 +42,29 @@
     <nav>
       <div class="nav_content container">
         <a href="/" class="shopsmart_logo">
-          <img class="shopsmart_logo" src="./img/logo/ShopSmart_text.png" alt="">
+          <img class="shopsmart_logo" src="../img/logo/ShopSmart_text.png" alt="">
         </a>
         <div class="nav_input_box">
           <input class="input" type="text" placeholder="Search product...">
-          <img class="searchSVG_IMG" src="./img/svg/icons/search.svg" alt="">
+          <img class="searchSVG_IMG" src="../img/svg/icons/search.svg" alt="">
         </div>
         <div class="overlay"></div>
         <ul class="nav_list">
           <li class="nav_list_item category_item">
             Category
-            <img class="heartSVG_IMG" src="./img/svg/icons/layers.svg" alt="">
+            <img class="heartSVG_IMG" src="../img/svg/icons/layers.svg" alt="">
           </li>
           <li class="nav_list_item cart_item">
             Basket
-            <img class="cartSVG_IMG" src="./img/svg/icons/cart.svg" alt="">
+            <img class="cartSVG_IMG" src="../img/svg/icons/cart.svg" alt="">
           </li>
           <li class="nav_list_item favorites_item">
             Favorites
-            <img class="heartSVG_IMG" src="./img/svg/icons/heart.svg" alt="">
+            <img class="heartSVG_IMG" src="../img/svg/icons/heart.svg" alt="">
           </li>
           <li class="nav_list_item location_item">
             Location
-            <img class="mapMarkerSVG_IMG" src="./img/svg/icons/mapMarker.svg" alt="">
+            <img class="mapMarkerSVG_IMG" src="../img/svg/icons/mapMarker.svg" alt="">
           </li>
         </ul>
         <div class="btn_wrapper">
@@ -79,10 +76,10 @@
 
           <button class="nav_logIn">
             <p>Log In</p>
-            <img class="logInSVG_IMG" src="./img/svg/icons/logIn.svg" alt="">
+            <img class="logInSVG_IMG" src="../img/svg/icons/logIn.svg" alt="">
           </button>
           <button class="burgerMenu">
-            <img class="logInSVG_IMG" src="./img/svg/icons/burgerMenu.svg" alt="">
+            <img class="logInSVG_IMG" src="../img/svg/icons/burgerMenu.svg" alt="">
           </button>
         </div>
       </div>
@@ -94,7 +91,7 @@
           <h2>Category</h2>
 
           <button class="clouseCategoryDialog empty-dialog_close">
-            <img src="./img/svg/icons/cancel.svg" alt="">
+            <img src="../img/svg/icons/cancel.svg" alt="">
           </button>
         </div>
 
@@ -107,7 +104,7 @@
         <div class="empty_dialog_title">
           <h2>Location</h2>
           <button class="clouseLocationDialog empty-dialog_close">
-            <img src="./img/svg/icons/cancel.svg" alt="">
+            <img src="../img/svg/icons/cancel.svg" alt="">
           </button>
         </div>
 
@@ -158,7 +155,7 @@
         <div class="empty_dialog_title">
           <h2>Log In</h2>
           <button class="clouseLocationDialog empty-dialog_close">
-            <img src="./img/svg/icons/cancel.svg" alt="">
+            <img src="../img/svg/icons/cancel.svg" alt="">
           </button>
         </div>
 
@@ -186,7 +183,7 @@
         <div class="empty_dialog_title">
           <h2>Register</h2>
           <button class="closeRegisterDialog empty-dialog_close">
-            <img src="./img/svg/icons/cancel.svg" alt="">
+            <img src="../img/svg/icons/cancel.svg" alt="">
           </button>
         </div>
 
@@ -220,34 +217,13 @@
       </dialog>
 
     </nav>
-
-    <div class="header_content container header_slide_show">
-      <button class="left_slide_show_arrow">
-        <img src="./img/svg/arrows/leftArrow.svg" alt="">
-      </button>
-
-      <button class="right_slide_show_arrow">
-        <img src="./img/svg/arrows/rightArrow.svg" alt="">
-      </button>
-
-      <!-- img teg exported this place -->
-    </div>
   </header>
 
   <main class="main container">
     <section class="electronik">
-      <h1 class="electronik_content-text empty_content-text">Electronika</h1>
-      <ul class="electronik_list empty-product_list">
-      </ul>
-    </section>
-
-    <section class="newCollection">
-      <h1 class="empty_content-text">New Collection</h1>
-      <ul class="newCollection_list empty-product_list"></ul>
-    </section>
-
-    <section class="lowPrice">
-
+      <h1 class="electronik_content-text empty_content-text">Favorites</h1>
+      <!-- <ul class="electronik_list empty-product_list"></ul> -->
+      <ul class="favorities_list empty-product_list"></ul>
     </section>
   </main>
 
@@ -317,10 +293,10 @@
           </li>
           <li class="footer_empty-item empty-dow">
             <a href="./page/download/appStory.html">
-              <img src="./img/svg/download/appStory.svg" alt="">
+              <img src="../img/svg/download/appStory.svg" alt="">
             </a>
             <a href="./page/download/playMarket.html">
-              <img src="./img/svg/download/playMarket.svg" alt="">
+              <img src="../img/svg/download/playMarket.svg" alt="">
             </a>
           </li>
 
@@ -329,16 +305,16 @@
           </li>
           <li class="footer_empty-item empty-item_social">
             <a href="./telegram">
-              <img src="./img/svg/sochialMedia/telegram.svg" alt="">
+              <img src="../img/svg/sochialMedia/telegram.svg" alt="">
             </a>
             <a href="./youtube">
-              <img src="./img/svg/sochialMedia/youtube.svg" alt="">
+              <img src="../img/svg/sochialMedia/youtube.svg" alt="">
             </a>
             <a href="./instagram">
-              <img src="./img/svg/sochialMedia/instagram.svg" alt="">
+              <img src="../img/svg/sochialMedia/instagram.svg" alt="">
             </a>
             <a href="./facebook">
-              <img src="./img/svg/sochialMedia/facebook.svg" alt="">
+              <img src="../img/svg/sochialMedia/facebook.svg" alt="">
             </a>
           </li>
         </ul>
@@ -358,20 +334,12 @@
       </div>
     </div>
   </footer>
-
 </body>
-<!-- CONNECTION LIBRARY || СОЕДЕННЁНЫЕ БИБЛИОТЕКА -->
-<!-- jquery srcipt -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
-
-<!-- slick slider script -->
-<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-
-<script src="./main.js"></script>
-<script src="./js/navbar.js"></script>
-<script src="./js/header.js"></script>
-<script src="./js/section/cart.js"></script>
-<script src="./js/section/categoreSlider.js"></script>
+<script src="../main.js"></script>
+<script src="../js/navbar.js"></script>
+<script src="../js/header.js"></script>
+<script src="../js/section/electronik.js"></script>
+<script src="../js/section/newCollection.js"></script>
 
 </html>

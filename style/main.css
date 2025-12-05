@@ -20,9 +20,7 @@
 }
 
 .electronik_list_item {
-  max-width: 250px;
-  width: 100%;
-  /* flex: 1 1 auto; */
+  flex: 0 1 250px;
   border: 1px solid #0000001A;
   border-radius: 20px;
   padding: 10px;
@@ -39,7 +37,7 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  gap: 1em;
+  gap: 1em; 
 }
 
 .empty-product_img {

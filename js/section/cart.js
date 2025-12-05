@@ -19,7 +19,6 @@ const electonik = [
   {
     // chexol
     star: 5,
-    // 19.502
     oldPrice: 50000,
     get newPrice() {
       return this.oldPrice - this.discount_count
@@ -101,76 +100,38 @@ const electonik = [
       img_3: "https://images.uzum.uz/d28qqpb4eu2ndi3rkj20/original.jpg"
     }
   },
-
-
-
-
   {
-    // telefon ushidigan
-    star: 5,
-    oldPrice: 37.259,
+    // smart witch
+    star: 4.2,
+    oldPrice: 65.815,
     get newPrice() {
       return this.oldPrice - this.discount_count
     },
     discount: 20,
     discount_count: 20,
-    name: 'selfi tayoqcha',
-    fullname: 'Селфи палка 3 в 1 со штативом и Bluetooth пультом, монопод-трипод для телефона',
+    name: 'smart witch',
+    fullname: 'Aqlli soatlar Smart Watch Big T800 Pro Max, Android va iOS uchun, 45 mm, Новые умные часы Aqlli Big T800 Pro Max, Android и iOS, 45 мм',
     IMG: {
-      img_1: 'https://images.uzum.uz/cuvmk5tpb7f9qcnem3u0/original.jpg 1x, https://images.uzum.uz/cuvmk5tpb7f9qcnem3u0/original.jpg 2x',
-      img_2: "https://images.uzum.uz/cuvmk0bvgbkm5ehh3jjg/original.jpg",
-      img_3: "https://images.uzum.uz/d28qqpb4eu2ndi3rkj20/original.jpg"
+      img_1: 'https://images.uzum.uz/cspluk5pq3ggq63csrv0/original.jpg 1x, https://images.uzum.uz/cspluk5pq3ggq63csrv0/original.jpg 2x',
+      img_2: 'https://images.uzum.uz/csj5uib4nkdv7h9itqd0/original.jpg 1x, https://images.uzum.uz/csj5uib4nkdv7h9itqd0/original.jpg 2x',
+      img_3: 'https://images.uzum.uz/csj5uibvgbkipf220e80/original.jpg 1x, https://images.uzum.uz/csj5uibvgbkipf220e80/original.jpg 2x',
     }
   },
   {
-    // telefon ushidigan
-    star: 5,
-    oldPrice: 37.259,
+    // fleshka
+    star: 4.2,
+    oldPrice: 65.815,
     get newPrice() {
       return this.oldPrice - this.discount_count
     },
     discount: 20,
     discount_count: 20,
-    name: 'selfi tayoqcha',
-    fullname: 'Селфи палка 3 в 1 со штативом и Bluetooth пультом, монопод-трипод для телефона',
+    name: 'fleshka',
+    fullname: 'Aqlli soatlar Smart Watch Big T800 Pro Max, Android va iOS uchun, 45 mm, Новые умные часы Aqlli Big T800 Pro Max, Android и iOS, 45 мм',
     IMG: {
-      img_1: 'https://images.uzum.uz/cuvmk5tpb7f9qcnem3u0/original.jpg 1x, https://images.uzum.uz/cuvmk5tpb7f9qcnem3u0/original.jpg 2x',
-      img_2: "https://images.uzum.uz/cuvmk0bvgbkm5ehh3jjg/original.jpg",
-      img_3: "https://images.uzum.uz/d28qqpb4eu2ndi3rkj20/original.jpg"
-    }
-  },
-  {
-    // telefon ushidigan
-    star: 5,
-    oldPrice: 37.259,
-    get newPrice() {
-      return this.oldPrice - this.discount_count
-    },
-    discount: 20,
-    discount_count: 20,
-    name: 'selfi tayoqcha',
-    fullname: 'Селфи палка 3 в 1 со штативом и Bluetooth пультом, монопод-трипод для телефона',
-    IMG: {
-      img_1: 'https://images.uzum.uz/cuvmk5tpb7f9qcnem3u0/original.jpg 1x, https://images.uzum.uz/cuvmk5tpb7f9qcnem3u0/original.jpg 2x',
-      img_2: "https://images.uzum.uz/cuvmk0bvgbkm5ehh3jjg/original.jpg",
-      img_3: "https://images.uzum.uz/d28qqpb4eu2ndi3rkj20/original.jpg"
-    }
-  },
-  {
-    // telefon ushidigan
-    star: 5,
-    oldPrice: 37.259,
-    get newPrice() {
-      return this.oldPrice - this.discount_count
-    },
-    discount: 20,
-    discount_count: 20,
-    name: 'selfi tayoqcha',
-    fullname: 'Селфи палка 3 в 1 со штативом и Bluetooth пультом, монопод-трипод для телефона',
-    IMG: {
-      img_1: 'https://images.uzum.uz/cuvmk5tpb7f9qcnem3u0/original.jpg 1x, https://images.uzum.uz/cuvmk5tpb7f9qcnem3u0/original.jpg 2x',
-      img_2: "https://images.uzum.uz/cuvmk0bvgbkm5ehh3jjg/original.jpg",
-      img_3: "https://images.uzum.uz/d28qqpb4eu2ndi3rkj20/original.jpg"
+      img_1: 'https://images.uzum.uz/d1im6s8jsv1jqvb7hdhg/original.jpg 1x, https://images.uzum.uz/d1im6s8jsv1jqvb7hdhg/original.jpg 2x',
+      img_2: "https://images.uzum.uz/cq2223b5qt1gj8ddrehg/original.jpg 1x, https://images.uzum.uz/cq2223b5qt1gj8ddrehg/original.jpg 2x",
+      img_3: "https://images.uzum.uz/cq221fgsarnfdo9a76fg/original.jpg 1x, https://images.uzum.uz/cq221fgsarnfdo9a76fg/original.jpg 2x"
     }
   },
 ]
@@ -214,7 +175,7 @@ function renderProduct(arr) {
 
   const favoriteBtn = document.querySelectorAll('.empty-product_favorites');
 
-  favoriteBtn.forEach(btn => {
+  favoriteBtn.forEach((btn) => {
     btn.addEventListener('click', function (e) {
       e.preventDefault()
       this.classList.toggle('is-active');
