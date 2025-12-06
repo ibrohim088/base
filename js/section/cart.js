@@ -46,11 +46,12 @@ const electonik = [
     fullname: "Кабель для зарядного устройства 120W, USB - Type-C, тканевая поверхность",
     IMG: {
       img_1: 'https://images.uzum.uz/d44d7kuj76ovvevcg4b0/original.jpg 1x, https://images.uzum.uz/d44d7kuj76ovvevcg4b0/original.jpg 2x',
-      img_2: 'https://images.uzum.uz/d444cbtv2sjo4rvg67i0/original.jpg 1x, https://images.uzum.uz/d444cbtv2sjo4rvg67i0/original.jpg 2x',
-      img_3: 'https://images.uzum.uz/d44d7kuj76ovvevcg4b0/original.jpg',
+      img_3: 'https://images.uzum.uz/d444cbtv2sjo4rvg67i0/original.jpg 1x, https://images.uzum.uz/d444cbtv2sjo4rvg67i0/original.jpg 2x',
+      img_2: 'https://images.uzum.uz/d44d7kuj76ovvevcg4b0/original.jpg',
     }
   },
   {
+    // zashita kamera
     star: 5,
     oldPrice: 18424,
     get newPrice() {

@@ -10,8 +10,6 @@ body {
   padding: 10px;
 }
 
-
-
 ul {
   padding: 0;
   margin: 0;
@@ -73,7 +71,7 @@ a {
 .header_content {
   position: relative;
   width: 100%;
-  height: 400px;
+  /* height: 400px; */
   overflow: hidden;
   border-radius: 10px;
   transition: all 1s ease;
@@ -86,10 +84,6 @@ a {
   justify-content: space-between;
   gap: 1em;
   border: 1px solid #0000002A;
-  /* --webkit-box-shadow: 0px 7px 58px 0px rgba(30, 60, 80, 0.4);
-  -moz-box-shadow: 0px 7px 58px 0px rgba(30, 60, 80, 0.4);
-  box-shadow: 0px 7px 58px 0px rgba(30, 60, 80, 0.4); */
-
   padding: 10px 15px;
   border-radius: 10px;
 }
@@ -97,7 +91,7 @@ a {
 @media (width < 1000px) {
   .header_content {
     width: 100%;
-    height: 300px;
+    /* height: 300px; */
   }
 
   .left_slide_show_arrow,
@@ -109,7 +103,7 @@ a {
 @media (width < 710px) {
   .header_content {
     width: 100%;
-    height: 250px;
+    /* height: 250px; */
   }
 
   .left_slide_show_arrow,
