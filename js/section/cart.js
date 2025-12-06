@@ -217,11 +217,20 @@ function renderProduct(arr) {
   })
 }
 
+const categoryList = document.querySelector('.header_content')
+
 // ? NAVBAR SEARCH FILTER FUNCTION 
 input.addEventListener('input', () => {
   const value = input.value.toLowerCase()
-  const filteredInputValue = electonik.filter(item => item.name.toLowerCase().includes(value) || item.fullname.toLowerCase().includes(value))
-  renderProduct(filteredInputValue)
+
+  if (value.length > 0) {
+    const filteredInputValue = electonik.filter(item => item.name.toLowerCase().includes(value) || item.fullname.toLowerCase().includes(value))
+    categoryList.style.display = 'none'
+    
+    renderProduct(filteredInputValue)
+  } else {
+    categoryList.style.display = 'block'
+  }
 })
 
 renderProduct(electonik)

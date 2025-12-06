@@ -14,36 +14,39 @@ const categoryes = [
     title: 'товары как в рынке малике, mahsulotlar huddi malika bozoridak, goods like in the Malika market',
     img: 'https://images.uzum.uz/d39p955r1spqpknjar4g/main_page_banner.jpg',
   },
-  {
-    id: 4,
-    title: 'товары как в рынке малике, mahsulotlar huddi malika bozoridak, goods like in the Malika market',
-    img: 'https://images.uzum.uz/d39p955r1spqpknjar4g/main_page_banner.jpg',
-  },
+
 ]
 
-const headContent = document.querySelector('.header_content')
-const leftArrow = document.querySelector('.left_slide_show_arrow')
-const rightArrow = document.querySelector('.right_slide_show_arrow')
 
-let currentIndex = 0
+const headContent = document.querySelector('.header_slide_show')
+const categoryesHTML = categoryes.map(categorye => `<img class='header_catrgory_img' src="${categorye.img}" alt="">`).join('')
+headContent.innerHTML = categoryesHTML
 
-const createImgTeg = document.createElement('img')
-createImgTeg.className = 'header_catrgory_img'
-headContent.appendChild(createImgTeg)
+$(function () {
+  $('.header_slide_show').slick({
+    dots: false,
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          arrows: false,
+          dots: true
+        }
+      }
+    ]
+  });
 
-const uppdateImg = () => {
-  createImgTeg.src = categoryes[currentIndex].img
-  createImgTeg.alt = categoryes[currentIndex].title
-}
+  $('.left_slide_show_arrow').on('click', (e) => {
+    e.preventDefault()
+    $('.header_slide_show').slick('slickPrev')
+  })
 
-uppdateImg()
-
-leftArrow.addEventListener('click', () => {
-  currentIndex = (currentIndex - 1 + categoryes.length) % categoryes.length
-  uppdateImg()
-})
-
-rightArrow.addEventListener('click', () => {
-  currentIndex = (currentIndex + 1) % categoryes.length
-  uppdateImg()
-})
+  $('.right_slide_show_arrow').on('click', (e) => {
+    e.preventDefault()
+    $('.header_slide_show').slick('slickNext')
+  })
+});
