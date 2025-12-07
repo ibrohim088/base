@@ -144,7 +144,7 @@ const electonik = [
     },
     discount: 20,
     discount_count: 67750,
-    name: 'Noutbuk uchun stend',
+    name: 'Stend',
     fullname: 'Подставка для ноутбука, складная, регулируемая, универсальная, yig\'iladigan, sozlanishi, universal',
     IMG: {
       img_1: 'https://avatars.mds.yandex.net/get-mpic/16503961/2a00000197d9decfacfd0c95905f22ac0726/orig',
@@ -225,20 +225,21 @@ const btnBlock = document.querySelector('.btn_wrapper')
 input.addEventListener('input', () => {
   const value = input.value.toLowerCase()
 
+  categoryList.style.display = value.length > 0 ? 'none' : 'block'
+  
   if (value.length > 0) {
-    const filteredInputValue = electonik.filter(item => item.name.toLowerCase().includes(value) || item.fullname.toLowerCase().includes(value))
-    categoryList.style.display = 'none'
-
-    if (document.body.clientWidth < 450) {
+    
+    if (document.body.clientWidth < 500) {
       btnBlock.style.display = 'none'
-    } else { 
+    } else {
       btnBlock.style.display = 'flex'
     }
+
+    const filteredInputValue = electonik.filter(item => item.name.toLowerCase().includes(value) || item.fullname.toLowerCase().includes(value))
 
     renderProduct(filteredInputValue)
   } else {
     btnBlock.style.display = 'flex'
-    categoryList.style.display = 'block'
   }
 })
 
