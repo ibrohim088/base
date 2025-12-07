@@ -4,7 +4,21 @@ const electonik = [
     star: 4.5,
     oldPrice: 240000,
     get newPrice() {
-      return this.oldPrice - this.discount_count
+      const newPrice = this.oldPrice - this.discount_count
+      const str = `${newPrice}`
+      let count = 0
+      let res = ''
+
+      for (let i = str.length - 1; i >= 0; i--) {
+        count++
+        res = str[i] + res
+        if (count === 3 && i !== 0) {
+          count = 0
+          res = ' ' + res
+        }
+      }
+
+      return res
     },
     discount: 60,
     discount_count: 191050,
@@ -21,7 +35,21 @@ const electonik = [
     star: 5,
     oldPrice: 50000,
     get newPrice() {
-      return this.oldPrice - this.discount_count
+      const newPrice = this.oldPrice - this.discount_count
+      const str = `${newPrice}`
+      let count = 0
+      let res = ''
+
+      for (let i = str.length - 1; i >= 0; i--) {
+        count++
+        res = str[i] + res
+        if (count === 3 && i !== 0) {
+          count = 0
+          res = ' ' + res
+        }
+      }
+
+      return res
     },
     discount: 35,
     discount_count: 30500,
@@ -38,7 +66,21 @@ const electonik = [
     star: 4.5,
     oldPrice: 14602,
     get newPrice() {
-      return this.oldPrice - this.discount_count
+      const newPrice = this.oldPrice - this.discount_count
+      const str = `${newPrice}`
+      let count = 0
+      let res = ''
+
+      for (let i = str.length - 1; i >= 0; i--) {
+        count++
+        res = str[i] + res
+        if (count === 3 && i !== 0) {
+          count = 0
+          res = ' ' + res
+        }
+      }
+
+      return res
     },
     discount: 5,
     discount_count: 5000,
@@ -55,7 +97,21 @@ const electonik = [
     star: 5,
     oldPrice: 18424,
     get newPrice() {
-      return this.oldPrice - this.discount_count
+      const newPrice = this.oldPrice - this.discount_count
+      const str = `${newPrice}`
+      let count = 0
+      let res = ''
+
+      for (let i = str.length - 1; i >= 0; i--) {
+        count++
+        res = str[i] + res
+        if (count === 3 && i !== 0) {
+          count = 0
+          res = ' ' + res
+        }
+      }
+
+      return res
     },
     discount: 8,
     discount_count: 8000,
@@ -72,7 +128,21 @@ const electonik = [
     star: 5,
     oldPrice: 28325,
     get newPrice() {
-      return this.oldPrice - this.discount_count
+      const newPrice = this.oldPrice - this.discount_count
+      const str = `${newPrice}`
+      let count = 0
+      let res = ''
+
+      for (let i = str.length - 1; i >= 0; i--) {
+        count++
+        res = str[i] + res
+        if (count === 3 && i !== 0) {
+          count = 0
+          res = ' ' + res
+        }
+      }
+
+      return res
     },
     discount: 20,
     discount_count: 20000,
@@ -89,7 +159,21 @@ const electonik = [
     star: 5,
     oldPrice: 37259,
     get newPrice() {
-      return this.oldPrice - this.discount_count
+      const newPrice = this.oldPrice - this.discount_count
+      const str = `${newPrice}`
+      let count = 0
+      let res = ''
+
+      for (let i = str.length - 1; i >= 0; i--) {
+        count++
+        res = str[i] + res
+        if (count === 3 && i !== 0) {
+          count = 0
+          res = ' ' + res
+        }
+      }
+
+      return res
     },
     discount: 20,
     discount_count: 20000,
@@ -106,7 +190,21 @@ const electonik = [
     star: 4.2,
     oldPrice: 65815,
     get newPrice() {
-      return this.oldPrice - this.discount_count
+      const newPrice = this.oldPrice - this.discount_count
+      const str = `${newPrice}`
+      let count = 0
+      let res = ''
+
+      for (let i = str.length - 1; i >= 0; i--) {
+        count++
+        res = str[i] + res
+        if (count === 3 && i !== 0) { 
+          count = 0
+          res = ' ' + res
+        }
+      }
+
+      return res
     },
     discount: 20,
     discount_count: 20000,
@@ -123,7 +221,21 @@ const electonik = [
     star: 4.2,
     oldPrice: 50000,
     get newPrice() {
-      return this.oldPrice - this.discount_count
+      const newPrice = this.oldPrice - this.discount_count
+      const str = `${newPrice}`
+      let count = 0
+      let res = ''
+
+      for (let i = str.length - 1; i >= 0; i--) {
+        count++
+        res = str[i] + res
+        if (count === 3 && i !== 0) { 
+          count = 0
+          res = ' ' + res
+        }
+      }
+
+      return res
     },
     discount: 36,
     discount_count: 13838,
@@ -140,7 +252,21 @@ const electonik = [
     star: 3.5,
     oldPrice: 120000,
     get newPrice() {
-      return this.oldPrice - this.discount_count
+      const newPrice = this.oldPrice - this.discount_count
+      const str = `${newPrice}`
+      let count = 0
+      let res = ''
+
+      for (let i = str.length - 1; i >= 0; i--) {
+        count++
+        res = str[i] + res
+        if (count === 3 && i !== 0) { 
+          count = 0
+          res = ' ' + res
+        }
+      }
+
+      return res
     },
     discount: 20,
     discount_count: 67750,
@@ -157,7 +283,21 @@ const electonik = [
     star: 5,
     oldPrice: 60000,
     get newPrice() {
-      return this.oldPrice - this.discount_count
+      const newPrice = this.oldPrice - this.discount_count
+      const str = `${newPrice}`
+      let count = 0
+      let res = ''
+
+      for (let i = str.length - 1; i >= 0; i--) {
+        count++
+        res = str[i] + res
+        if (count === 3 && i !== 0) { 
+          count = 0
+          res = ' ' + res
+        }
+      }
+
+      return res
     },
     discount: 30,
     discount_count: 33462,
@@ -193,7 +333,7 @@ function renderProduct(arr) {
             <ul class="empty-price_list">
               <div class="empty-price_list_wrapper">
                 <li class="empty-price_item empty-old_price">${product.oldPrice} sum</li>
-                <li class="empty-price_item empty-price_discount">-${product.discount}</li>
+                
               </div>
               <li class="empty-price_item empty-new_price">${product.newPrice} sum</li>
             </ul>
@@ -205,6 +345,7 @@ function renderProduct(arr) {
       </div>
     </li>
   `).join('')
+  {/* <li class="empty-price_item empty-price_discount">-${product.discount}</li> */ }
 
   electonikList.innerHTML = html
 
@@ -226,9 +367,9 @@ input.addEventListener('input', () => {
   const value = input.value.toLowerCase()
 
   categoryList.style.display = value.length > 0 ? 'none' : 'block'
-  
+
   if (value.length > 0) {
-    
+
     if (document.body.clientWidth < 500) {
       btnBlock.style.display = 'none'
     } else {
