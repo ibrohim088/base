@@ -219,6 +219,7 @@ function renderProduct(arr) {
 }
 
 const categoryList = document.querySelector('.header_content')
+const btnBlock = document.querySelector('.btn_wrapper')
 
 // ? NAVBAR SEARCH FILTER FUNCTION 
 input.addEventListener('input', () => {
@@ -227,9 +228,16 @@ input.addEventListener('input', () => {
   if (value.length > 0) {
     const filteredInputValue = electonik.filter(item => item.name.toLowerCase().includes(value) || item.fullname.toLowerCase().includes(value))
     categoryList.style.display = 'none'
-    
+
+    if (document.body.clientWidth < 450) {
+      btnBlock.style.display = 'none'
+    } else { 
+      btnBlock.style.display = 'flex'
+    }
+
     renderProduct(filteredInputValue)
   } else {
+    btnBlock.style.display = 'flex'
     categoryList.style.display = 'block'
   }
 })

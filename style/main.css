@@ -129,7 +129,6 @@
 }
 
 .empty-product_buy {
-  /* width: 70px; */
   background: #233c66;
   transition: border 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
   border-radius: 16px;
