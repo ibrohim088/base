@@ -11,7 +11,7 @@ function openMenu() {
 
   if (isActive) {
     document.body.style.overflow = 'hidden'
-  } else { 
+  } else {
     document.body.style.overflow = ''
   }
 }
@@ -28,13 +28,12 @@ burgerMenu.addEventListener('click', openMenu)
 
 // ? dialog close function ===============================================================
 const clouseDialog = document.querySelectorAll('.empty-dialog_close')
-// clouseDialog.addEventListener('click', () => categoryDialog.close())
-// clouseDialog.addEventListener('click', () => locationDialog.close())
 
 clouseDialog.forEach(btn => {
   btn.addEventListener('click', () => {
     // find parent dialog
-    const dialog = btn.closest('dialog');
+    const dialog = btn.closest('dialog')
+    document.body.style.overflow = '';
     dialog.close();
   });
 });
@@ -43,21 +42,33 @@ clouseDialog.forEach(btn => {
 // ? Category modal open function ========================================================
 const category = document.querySelector('.category_item')
 const categoryDialog = document.querySelector('.category_dialog')
-category.addEventListener('click', () => categoryDialog.showModal())
+category.addEventListener('click', () => {
+  categoryDialog.showModal()
+  document.body.style.overflow = 'hidden'
+})
 
 
 // ? location modal open funciton ==============================================
 const locations = document.querySelector('.location_item')
 const locationDialog = document.querySelector('.location_dialog')
-locations.addEventListener('click', () => locationDialog.showModal())
+locations.addEventListener('click', () => {
+  locationDialog.showModal()
+  document.body.style.overflow = 'hidden'
+})
 
 
 // ? logIn modal open function ============================================================
 const logIn = document.querySelector('.nav_logIn')
 const logInDialog = document.querySelector('.logIn_dialog')
-logIn.addEventListener('click', () => logInDialog.showModal())
+logIn.addEventListener('click', () => {
+  logInDialog.showModal()
+  document.body.style.overflow = 'hidden'
+})
 
 // ? register modal open function ============================================================
-// const register = document.querySelector('.nav_signUp')
-// const registerDialog = document.querySelector('.register_dialog')
-// register.addEventListener('click', () => registerDialog.showModal())
+const register = document.querySelector('.nav_register')
+const registerDialog = document.querySelector('.register_dialog')
+register.addEventListener('click', () => {
+  registerDialog.showModal()
+  document.body.style.overflow = 'hidden'
+})

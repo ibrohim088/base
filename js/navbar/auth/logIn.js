@@ -22,4 +22,5 @@ logInInput.addEventListener('input', () => {
   }
 
   logInInput.value = res
+
 })

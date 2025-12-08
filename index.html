@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="./style//dialog/categoryDialog.css">
   <link rel="stylesheet" href="./style//dialog/locationDialog.css">
   <!-- <link rel="stylesheet" href="./style/dialog/registerDialog.css"> -->
-  <link rel="stylesheet" href="./style/dialog/logInDialog.css">
+  <link rel="stylesheet" href="./style/dialog/authDialog.css">
 
   <!-- header style import -->
   <link rel="stylesheet" href="./style/header.css">
@@ -155,7 +155,7 @@
       </dialog>
 
       <!-- logIn dialog block -->
-      <dialog class="logIn_dialog empty-dialog">
+      <dialog class="logIn_dialog empty-auth_dialog empty-dialog">
         <div class="empty_dialog_title">
           <h2>Log In</h2>
 
@@ -164,11 +164,45 @@
           </button>
         </div>
 
-        <h1 class="logIn_title">Enter in Shop Smart</h1>
+        <h1 class="empty-auth_title">Enter in Shop Smart</h1>
 
-        <form class="login_form">
+        <form class="empty-auth_form">
           <input class="logInInput" type="tel" placeholder="+998 00 - 000 - 00" value="+998 " maxlength="17">
-          <button class="empty-btn">Submit</button>
+          <button type="button" class="empty-btn form_auth-btn">Submit</button>
+        </form>
+
+        <p class="empty-auth_text">If you already Existed <span class="nav_register">register</span></p>
+      </dialog>
+
+      <!-- register dialog block -->
+      <dialog class="register_dialog empty-auth_dialog empty-dialog">
+        <div class="empty_dialog_title">
+          <h2>Register</h2>
+
+          <button class="clouseLocationDialog empty-dialog_close">
+            <img src="./img/svg/icons/cancel.svg" alt="">
+          </button>
+        </div>
+
+        <h1 class="empty-auth_title">Enter in Shop Smart</h1>
+
+        <form class="empty-auth_form">
+          <label for="fullname">Full Name</label>
+          <input type="text" id="fullname" placeholder="enter your fullname">
+
+          <label for="birthday">Date</label>
+          <input type="date" id="birthday" placeholder="choose your birthday">
+
+          <label for="email">Email</label>
+          <input type="email" id="email" placeholder="enter your email addres" pattern=".+@example\.com">
+
+          <label for="password">Password</label>
+          <input type="password" id="password" placeholder="enter your password" maxlength="8">
+
+          <label for="phone">Phone Number</label>
+          <input class="logInInput" id="phone" type="tel" placeholder="+998 00 - 000 - 00" value="+998 " maxlength="17">
+
+          <button type="button" class="empty-btn form_auth-btn">Submit</button>
         </form>
       </dialog>
 
