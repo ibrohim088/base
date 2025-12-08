@@ -2,7 +2,7 @@ const logInInput = document.querySelector('.logInInput')
 
 logInInput.addEventListener('input', () => {
   const value = logInInput.value.replace(/\D/g, '')
-  let res = ''
+  let res = '+'
 
   for (let i = 0; i < value.length; i++) {
     if (i <= 2) {
