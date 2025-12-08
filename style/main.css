@@ -21,7 +21,7 @@
 
 .electronik_list_item {
   flex: 0 1 250px;
-  border: 1px solid #0000001A;
+  /* border: 1px solid #0000001A; */
   border-radius: 20px;
   padding: 10px;
   transition: border 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
