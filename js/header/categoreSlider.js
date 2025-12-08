@@ -14,7 +14,21 @@ const categoryes = [
     title: 'товары как в рынке малике, mahsulotlar huddi malika bozoridak, goods like in the Malika market',
     img: 'https://images.uzum.uz/d39p955r1spqpknjar4g/main_page_banner.jpg',
   },
-
+  {
+    id: 4,
+    title: 'primekraft, cm cybermass, идите к цели без препятствий-заказываете витамины и спортивное питание с выгодой',
+    img: 'https://images.uzum.uz/d4id26lv2sjnqk4ip89g/main_page_banner.jpg'
+  },
+  {
+    id: 5,
+    title: 'лучшая версия себя, товары для ухода, спорта и книги по личностному росту-заказывайте с выгодай',
+    img: 'https://images.uzum.uz/d4iissej76oneqamfm2g/main_page_banner.jpg'
+  },
+  {
+    id: 6,
+    title: 'bosch, холодилники, пылесосы, чайники и другая техника для дома по низким ценам и в рассрочку',
+    img: 'https://images.uzum.uz/d4ipla6j76oneqamk71g/main_page_banner.jpg'
+  },
 ]
 
 

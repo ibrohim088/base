@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="./style/dialog/empty-dialog.css">
   <link rel="stylesheet" href="./style//dialog/categoryDialog.css">
   <link rel="stylesheet" href="./style//dialog/locationDialog.css">
-  <link rel="stylesheet" href="./style/dialog/registerDialog.css">
+  <!-- <link rel="stylesheet" href="./style/dialog/registerDialog.css"> -->
   <link rel="stylesheet" href="./style/dialog/logInDialog.css">
 
   <!-- header style import -->
@@ -157,15 +157,18 @@
       <!-- logIn dialog block -->
       <dialog class="logIn_dialog empty-dialog">
         <div class="empty_dialog_title">
-          <h2>Authentication</h2>
-          
+          <h2>Log In</h2>
+
           <button class="clouseLocationDialog empty-dialog_close">
             <img src="./img/svg/icons/cancel.svg" alt="">
           </button>
         </div>
 
+        <h1 class="logIn_title">Enter in Shop Smart</h1>
+
         <form class="login_form">
-            
+          <input class="logInInput" type="tel" placeholder="+998 00 - 000 - 00" value="+998 " maxlength="">
+          <button class="empty-btn">Submit</button>
         </form>
       </dialog>
 
@@ -192,9 +195,9 @@
       </ul>
     </section>
 
-    <!-- <section class="newCollection">
+    <!-- <section class="collection">
       <h1 class="empty_content-text">New Collection</h1>
-      <ul class="newCollection_list empty-product_list"></ul>
+      <ul class="collection_list empty-product_list"></ul>
     </section> -->
   </main>
 
@@ -312,9 +315,13 @@
 <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
 <script src="./main.js"></script>
-<script src="./js/navbar.js"></script>
-<script src="./js/header.js"></script>
+
+<script src="./js/header/categoreSlider.js"></script>
+
+<script src="./js/navbar/navbar.js"></script>
+<script src="./js/navbar/auth/logIn.js"></script>
+<script src="./js/navbar/auth/register.js"></script>
+
 <script src="./js/section/cart.js"></script>
-<script src="./js/section/categoreSlider.js"></script>
 
 </html>

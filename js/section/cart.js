@@ -1,4 +1,4 @@
-const electonik = [
+const electronik = [
   {
     // airpods
     star: 4.5,
@@ -312,7 +312,7 @@ const electonik = [
 ]
 
 
-const electonikList = document.querySelector('.electronik_list')
+const electronikList = document.querySelector('.electronik_list')
 const input = document.querySelector('.input')
 
 function renderProduct(arr) {
@@ -347,7 +347,7 @@ function renderProduct(arr) {
   `).join('')
   {/* <li class="empty-price_item empty-price_discount">-${product.discount}</li> */ }
 
-  electonikList.innerHTML = html
+  electronikList.innerHTML = html
 
   const favoriteBtn = document.querySelectorAll('.empty-product_favorites');
 
@@ -376,7 +376,7 @@ input.addEventListener('input', () => {
       btnBlock.style.display = 'flex'
     }
 
-    const filteredInputValue = electonik.filter(item => item.name.toLowerCase().includes(value) || item.fullname.toLowerCase().includes(value))
+    const filteredInputValue = electronik.filter(item => item.name.toLowerCase().includes(value) || item.fullname.toLowerCase().includes(value))
 
     renderProduct(filteredInputValue)
   } else {
@@ -384,4 +384,4 @@ input.addEventListener('input', () => {
   }
 })
 
-renderProduct(electonik)
+renderProduct(electronik)

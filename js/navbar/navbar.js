@@ -58,6 +58,6 @@ const logInDialog = document.querySelector('.logIn_dialog')
 logIn.addEventListener('click', () => logInDialog.showModal())
 
 // ? register modal open function ============================================================
-const register = document.querySelector('.nav_signUp')
-const registerDialog = document.querySelector('.register_dialog')
-register.addEventListener('click', () => registerDialog.showModal())
+// const register = document.querySelector('.nav_signUp')
+// const registerDialog = document.querySelector('.register_dialog')
+// register.addEventListener('click', () => registerDialog.showModal())
