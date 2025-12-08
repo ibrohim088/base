@@ -118,9 +118,9 @@ const electonik = [
     name: 'Kamera himoyasi',
     fullname: "Kamera uchun himoya:Защита камеры для iPhone",
     IMG: {
-      img_1: "https://images.uzum.uz/d43hj65v2sjj05ospmp0/original.jpg 1x, https://images.uzum.uz/d43hj65v2sjj05ospmp0/original.jpg 2x",
-      img_2: "https://images.uzum.uz/d43hjcdv2sjj05ospmrg/original.jpg 1x, https://images.uzum.uz/d43hjcdv2sjj05ospmrg/original.jpg 2x",
-      img_3: "https://images.uzum.uz/co3gbntlqsilsr3lho9g/original.jpg 1x, https://images.uzum.uz/co3gbntlqsilsr3lho9g/original.jpg 2x"
+      img_1: "https://images.uzum.uz/co3gbntlqsilsr3lho9g/original.jpg 1x, https://images.uzum.uz/co3gbntlqsilsr3lho9g/original.jpg 2x",
+      img_2: "https://images.uzum.uz/d43hj65v2sjj05ospmp0/original.jpg 1x, https://images.uzum.uz/d43hj65v2sjj05ospmp0/original.jpg 2x",
+      img_3: "https://images.uzum.uz/d43hjcdv2sjj05ospmrg/original.jpg 1x, https://images.uzum.uz/d43hjcdv2sjj05ospmrg/original.jpg 2x",
     }
   },
   {
@@ -198,7 +198,7 @@ const electonik = [
       for (let i = str.length - 1; i >= 0; i--) {
         count++
         res = str[i] + res
-        if (count === 3 && i !== 0) { 
+        if (count === 3 && i !== 0) {
           count = 0
           res = ' ' + res
         }
@@ -229,7 +229,7 @@ const electonik = [
       for (let i = str.length - 1; i >= 0; i--) {
         count++
         res = str[i] + res
-        if (count === 3 && i !== 0) { 
+        if (count === 3 && i !== 0) {
           count = 0
           res = ' ' + res
         }
@@ -260,7 +260,7 @@ const electonik = [
       for (let i = str.length - 1; i >= 0; i--) {
         count++
         res = str[i] + res
-        if (count === 3 && i !== 0) { 
+        if (count === 3 && i !== 0) {
           count = 0
           res = ' ' + res
         }
@@ -291,7 +291,7 @@ const electonik = [
       for (let i = str.length - 1; i >= 0; i--) {
         count++
         res = str[i] + res
-        if (count === 3 && i !== 0) { 
+        if (count === 3 && i !== 0) {
           count = 0
           res = ' ' + res
         }
