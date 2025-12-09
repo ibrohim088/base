@@ -14,25 +14,30 @@
   flex-direction: column;
   gap: 10px;
 
-  label {
+  /* label {
     margin-top: 1em;
 
     &:first-child {
       margin-top: 0;
     }
-  }
+  } */
 
 
   input {
     cursor: pointer;
     border: 1px solid #0000002A;
     outline: none;
-    padding: 10px 15px 8px;
+    padding: 15px 10px;
     border-radius: 14px;
     transition: border 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    font-size: 18px;
   }
 
   button {
+    padding: 15px;  
+    background: #233c66;
+    color: #91c153;
+    font-size: 18px;
 
     &:hover {
       -webkit-box-shadow: none;
