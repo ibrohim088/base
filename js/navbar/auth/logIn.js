@@ -1,27 +1,30 @@
-const logInInput = document.querySelector('.logInInput')
+const logInInputs = document.querySelectorAll('.logInInput')
 const logInBtn = document.querySelector('.logIn_btn')
 
-logInInput.addEventListener('input', () => {
-  const value = logInInput.value.replace(/\D/g, '')
-  let res = '+'
+logInInputs.forEach(logInInput => {
 
-  for (let i = 0; i < value.length; i++) {
-    if (i <= 2) {
-      res += value[i]
+  logInInput.addEventListener('input', () => {
+    const value = logInInput.value.replace(/\D/g, '')
+    let res = '+'
 
-      if (i === 2) res += ' '
+    for (let i = 0; i < value.length; i++) {
+      if (i <= 2) {
+        res += value[i]
 
-    } else if (i <= 4) {
-      res += value[i]
+        if (i === 2) res += ' '
 
-      if (i === 4) res += ' '
-    } else if (i < 14) {
-      res += value[i]
+      } else if (i <= 4) {
+        res += value[i]
 
-      if (i === 7 || i === 9) res += '-'
+        if (i === 4) res += ' '
+      } else if (i < 14) {
+        res += value[i]
+
+        if (i === 7 || i === 9) res += '-'
+      }
     }
-  }
 
-  logInInput.value = res
+    logInInput.value = res
+  })
 
 })
