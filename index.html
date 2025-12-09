@@ -48,7 +48,7 @@
           <img class="shopsmart_logo" src="./img/logo/ShopSmart_text.png" alt="">
         </a>
         <div class="nav_input_box">
-          <input class="input" type="text" placeholder="Search product...">
+          <input class="input" type="text" placeholder="Search product..." autofocus>
           <img class="searchSVG_IMG" src="./img/svg/icons/search.svg" alt="">
         </div>
         <div class="overlay"></div>
@@ -166,8 +166,8 @@
 
         <h1 class="empty-auth_title">Log In in Shop Smart</h1>
 
-        <form class="empty-auth_form">
-          <input class="logInInput" type="tel" placeholder="+998 00 - 000 - 00" value="+998" maxlength="17">
+        <form class="empty-auth_form" autocomplete="off">
+          <input class="logInInput" type="tel" placeholder="+998 00 - 000 - 00" value="+998" maxlength="17" autofocus>
           <button type="button" class="logIn_btn empty-btn form_auth-btn">Submit</button>
         </form>
 
@@ -186,9 +186,9 @@
 
         <h1 class="empty-auth_title">Register in Shop Smart</h1>
 
-        <form class="empty-auth_form">
+        <form class="empty-auth_form" autocomplete="off">
           <!-- <label for="fullname">Full Name</label> -->
-          <input class="fullname" type="text" id="fullname" placeholder="Fullname">
+          <input class="fullname" type="text" id="fullname" placeholder="Fullname" autofocus>
 
           <!-- <label for="birthday">Date</label> -->
           <input class="inputDate" type="datetime" id="birthday" placeholder="DD.MM.YYYY" maxlength="10">
@@ -226,6 +226,16 @@
     <section class="electronik">
       <h1 class="electronik_content-text empty_content-text">Electronika</h1>
       <ul class="electronik_list empty-product_list">
+        <li class="empty-product_item-error">
+          <img src="./img/logo/nothingYet.png" alt="">
+          <h1>There are no products yet</h1>
+        </li>
+        
+        <li class="empty-product_item-error">
+          <img src="./img/logo/searchNotFounded.png" alt="">
+          <h1>There is nothing suitable for what you wrote.</h1>
+          <p>There may be a mistake in the product name or we don't have that product yet.</p>
+        </li>
       </ul>
     </section>
 

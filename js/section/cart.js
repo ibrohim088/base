@@ -376,6 +376,7 @@ input.addEventListener('input', () => {
       btnBlock.style.display = 'flex'
     }
 
+
     const filteredInputValue = electronik.filter(item => item.name.toLowerCase().includes(value) || item.fullname.toLowerCase().includes(value))
 
     renderProduct(filteredInputValue)
@@ -384,4 +385,4 @@ input.addEventListener('input', () => {
   }
 })
 
-renderProduct(electronik)
+// renderProduct(electronik)
