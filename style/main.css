@@ -50,8 +50,8 @@
 
 .empty-product_favorites {
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: 6px;
+  right: 6px;
   width: 30px;
   height: 30px;
   padding: 5px;
@@ -108,7 +108,7 @@
 
 .empty-old_price {
   color: #999;
-  font-size: 14px;
+  /* font-size: 14px; */
   text-decoration: line-through;
   font-weight: 400;
 }
@@ -168,3 +168,25 @@
   }
 }
 
+
+@media(width < 480px) {
+
+  .empty-old_price {
+    font-size: 8px;
+  }
+
+  .empty-product_name,
+  .empty-price_item {
+    font-size: 18px;
+  }
+
+  .empty-product_buy {}
+
+  .empty-btn {
+    padding: 5px 7px 4px;
+  }
+
+  .empty-product_buy {
+    font-size: 12px;
+  }
+}

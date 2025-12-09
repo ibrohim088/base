@@ -1,4 +1,5 @@
 const logInInput = document.querySelector('.logInInput')
+const logInBtn = document.querySelector('.logIn_btn')
 
 logInInput.addEventListener('input', () => {
   const value = logInInput.value.replace(/\D/g, '')
