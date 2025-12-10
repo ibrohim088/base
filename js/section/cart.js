@@ -311,12 +311,33 @@ const electronik = [
   },
 ]
 
+// const electronik = []
 
 const electronikList = document.querySelector('.electronik_list')
 const input = document.querySelector('.input')
 
 function renderProduct(arr) {
-  const html = arr.map(product => `
+
+
+  electronikList.innerHTML =
+    `<li class="empty-product_item-error">
+        <img src="./img/logo/foxs/loading.png" alt="">
+        <h1>Loading...</h1>
+      </li>`
+
+  setTimeout(() => {
+
+    let html = ''
+
+    if (arr.length === 0) {
+      html =
+        `<li class="empty-product_item-error">
+          <img src="./img/logo/foxs/nothing.png" alt="">
+          <h1>There are no products yet</h1>
+        </li>`
+
+    } else {
+      html = arr.map(product => `
     <li class="electronik_list_item">
       <div class="empty-item_content">
         <img class="empty-product_img" src="${product.IMG.img_1.split(' ')[0]}" alt="">
@@ -345,28 +366,34 @@ function renderProduct(arr) {
       </div>
     </li>
   `).join('')
-  {/* <li class="empty-price_item empty-price_discount">-${product.discount}</li> */ }
+      {/* <li class="empty-price_item empty-price_discount">-${product.discount}</li> */ }
+    }
 
-  electronikList.innerHTML = html
+    electronikList.innerHTML = html
 
-  const favoriteBtn = document.querySelectorAll('.empty-product_favorites');
+    const favoriteBtn = document.querySelectorAll('.empty-product_favorites');
 
-  favoriteBtn.forEach((btn) => {
-    btn.addEventListener('click', function (e) {
-      e.preventDefault()
-      this.classList.toggle('is-active');
-    });
-  })
+    favoriteBtn.forEach((btn) => {
+      btn.addEventListener('click', function (e) {
+        e.preventDefault()
+        this.classList.toggle('is-active');
+      });
+    })
+
+  }, 2000)
 }
 
 const categoryList = document.querySelector('.header_content')
 const btnBlock = document.querySelector('.btn_wrapper')
+const categoryTItle = document.querySelector('.empty_content-text')
 
 // ? NAVBAR SEARCH FILTER FUNCTION 
 input.addEventListener('input', () => {
   const value = input.value.toLowerCase()
+  categoryTItle.style.display = value.length > 0 ? 'none' : 'block'
 
   categoryList.style.display = value.length > 0 ? 'none' : 'block'
+
 
   if (value.length > 0) {
 
@@ -377,7 +404,9 @@ input.addEventListener('input', () => {
     }
 
 
+
     const filteredInputValue = electronik.filter(item => item.name.toLowerCase().includes(value) || item.fullname.toLowerCase().includes(value))
+
 
     renderProduct(filteredInputValue)
   } else {
@@ -385,4 +414,4 @@ input.addEventListener('input', () => {
   }
 })
 
-// renderProduct(electronik)
+renderProduct(electronik)
