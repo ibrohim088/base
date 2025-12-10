@@ -380,7 +380,7 @@ function renderProduct(arr) {
       });
     })
 
-  }, 2000)
+  }, 2500)
 }
 
 const categoryList = document.querySelector('.header_content')
