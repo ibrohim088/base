@@ -387,7 +387,6 @@ const categoryList = document.querySelector('.header_content')
 const btnBlock = document.querySelector('.btn_wrapper')
 const categoryTitle = document.querySelector('.empty_content-text')
 const searchIcon = document.querySelector('.searchSVG_IMG')
-// const removeLen = document.q
 
 // ? NAVBAR SEARCH FILTER FUNCTION 
 input.addEventListener('input', () => {
@@ -395,8 +394,8 @@ input.addEventListener('input', () => {
   categoryTitle.style.display = value.length > 0 ? 'none' : 'block'
   categoryList.style.display = value.length > 0 ? 'none' : 'block'
 
-  // 
   if (value.length > 0) {
+    // если input.length больше 0 то serach icon меняетса на clear icon
     searchIcon.src = './img/svg/icons/cancel.svg'
     searchIcon.onclick = () => {
       input.value = ''
