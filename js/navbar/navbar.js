@@ -45,6 +45,10 @@ const categoryDialog = document.querySelector('.category_dialog')
 category.addEventListener('click', () => {
   categoryDialog.showModal()
   document.body.style.overflow = 'hidden'
+  
+  locationDialog.close()
+  logInDialog.close()
+  registerDialog.close()
 })
 
 
@@ -54,6 +58,10 @@ const locationDialog = document.querySelector('.location_dialog')
 locations.addEventListener('click', () => {
   locationDialog.showModal()
   document.body.style.overflow = 'hidden'
+
+  categoryDialog.close()
+  logInDialog.close()
+  registerDialog.close()
 })
 
 
@@ -63,6 +71,10 @@ const logInDialog = document.querySelector('.logIn_dialog')
 logIn.addEventListener('click', () => {
   logInDialog.showModal()
   document.body.style.overflow = 'hidden'
+
+  locationDialog.close()
+  categoryDialog.close()
+  registerDialog.close()
 })
 
 // ? register modal open function ============================================================
@@ -71,4 +83,8 @@ const registerDialog = document.querySelector('.register_dialog')
 register.addEventListener('click', () => {
   registerDialog.showModal()
   document.body.style.overflow = 'hidden'
+
+  logInDialog.close()
+  categoryDialog.close()
+  locationDialog.close()
 })
