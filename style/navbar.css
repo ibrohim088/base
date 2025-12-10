@@ -197,14 +197,15 @@
     height: 10vh;
     padding: 10px;
     position: fixed;
-    bottom: 0em;
+    top: 90%;
     left: 0;
     right: 0;
     z-index: 1000;
 
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
-    transform: translateY(40em);
+    /* samsung a56 ga tushdi: transform: translateY(40em); */
+    transform: translateY(0em);
   }
 
   .nav_list--visible {
