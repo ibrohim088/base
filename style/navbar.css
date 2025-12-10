@@ -204,7 +204,7 @@
 
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
-    transform: translateY(0%);
+    transform: translateY(45em);
   }
 
   .nav_list--visible {
