@@ -45,8 +45,10 @@ const categoryDialog = document.querySelector('.category_dialog')
 category.addEventListener('click', () => {
   categoryDialog.showModal()
   document.body.style.overflow = 'hidden'
-  
+
   locationDialog.close()
+  basketDialog.close()
+  favoritesDialog.close()
   logInDialog.close()
   registerDialog.close()
 })
@@ -60,9 +62,42 @@ locations.addEventListener('click', () => {
   document.body.style.overflow = 'hidden'
 
   categoryDialog.close()
+  basketDialog.close()
+  favoritesDialog.close()
   logInDialog.close()
   registerDialog.close()
 })
+
+
+
+// ? basket modal open function ============================================================
+const basket = document.querySelector('.basket_item')
+const basketDialog = document.querySelector('.basket_dialog')
+basket.addEventListener('click', () => {
+  basketDialog.showModal()
+  document.body.style.overflow = 'hidden'
+
+  categoryDialog.close()
+  locationDialog.close()
+  favoritesDialog.close()
+  logInDialog.close()
+  registerDialog.close()
+})
+
+// ? basket modal open function ============================================================
+const favorites = document.querySelector('.favorites_item')
+const favoritesDialog = document.querySelector('.favorites_dialog')
+favorites.addEventListener('click', () => {
+  favoritesDialog.showModal()
+  document.body.style.overflow = 'hidden'
+
+  categoryDialog.close()
+  locationDialog.close()
+  basketDialog.close()
+  logInDialog.close()
+  registerDialog.close()
+})
+
 
 
 // ? logIn modal open function ============================================================
@@ -72,8 +107,10 @@ logIn.addEventListener('click', () => {
   logInDialog.showModal()
   document.body.style.overflow = 'hidden'
 
-  locationDialog.close()
   categoryDialog.close()
+  locationDialog.close()
+  basketDialog.close()
+  favoritesDialog.close()
   registerDialog.close()
 })
 
@@ -84,7 +121,9 @@ register.addEventListener('click', () => {
   registerDialog.showModal()
   document.body.style.overflow = 'hidden'
 
-  logInDialog.close()
   categoryDialog.close()
   locationDialog.close()
+  basketDialog.close()
+  favoritesDialog.close()
+  logInDialog.close()
 })
