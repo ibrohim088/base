@@ -380,7 +380,7 @@ function renderProduct(arr) {
       });
     })
 
-  }, 2500)
+  }, 1500)
 }
 
 const categoryList = document.querySelector('.header_content')
@@ -403,10 +403,20 @@ input.addEventListener('input', () => {
       btnBlock.style.display = 'flex'
     }
 
-
-
     const filteredInputValue = electronik.filter(item => item.name.toLowerCase().includes(value) || item.fullname.toLowerCase().includes(value))
 
+    // пустой ненайденые массив равняетса к 0 заначить 0 === 0
+    if (filteredInputValue.length === 0) {
+      electronikList.innerHTML = `
+      <li class="empty-product_item-error">
+        <img src="./img/logo/foxs/search.png" alt="">
+        <h1>There is nothing suitable for what you wrote.</h1>
+        <p>There may be a mistake in the product name or we don't have that product yet.</p>
+      </li>`
+
+      // нужен для того чтобы остонавть поиск чтобы он не продолжалса
+      return
+    }
 
     renderProduct(filteredInputValue)
   } else {
