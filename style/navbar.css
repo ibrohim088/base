@@ -194,18 +194,15 @@
     gap: 10px;
 
     max-width: 100%;
-    height: 10vh;
+    height: 8vh;
     padding: 10px;
     position: fixed;
-    top: 90%;
+    top: 93%;
     left: 0;
     right: 0;
     bottom: 0;
-    z-index: 1000;
 
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    /* samsung a56 ga tushdi: transform: translateY(40em); */
+    border: 0;
     transform: translateY(0em);
   }
 

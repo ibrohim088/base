@@ -385,17 +385,25 @@ function renderProduct(arr) {
 
 const categoryList = document.querySelector('.header_content')
 const btnBlock = document.querySelector('.btn_wrapper')
-const categoryTItle = document.querySelector('.empty_content-text')
+const categoryTitle = document.querySelector('.empty_content-text')
+const searchIcon = document.querySelector('.searchSVG_IMG')
+// const removeLen = document.q
 
 // ? NAVBAR SEARCH FILTER FUNCTION 
 input.addEventListener('input', () => {
   const value = input.value.toLowerCase()
-  categoryTItle.style.display = value.length > 0 ? 'none' : 'block'
-
+  categoryTitle.style.display = value.length > 0 ? 'none' : 'block'
   categoryList.style.display = value.length > 0 ? 'none' : 'block'
 
-
+  // 
   if (value.length > 0) {
+    searchIcon.src = './img/svg/icons/cancel.svg'
+    searchIcon.onclick = () => {
+      input.value = ''
+      searchIcon.src = './img/svg/icons/search.svg'
+      input.focus()
+    }
+
 
     if (document.body.clientWidth < 500) {
       btnBlock.style.display = 'none'

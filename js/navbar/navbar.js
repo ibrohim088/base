@@ -99,7 +99,6 @@ favorites.addEventListener('click', () => {
 })
 
 
-
 // ? logIn modal open function ============================================================
 const logIn = document.querySelector('.nav_logIn')
 const logInDialog = document.querySelector('.logIn_dialog')
@@ -127,3 +126,5 @@ register.addEventListener('click', () => {
   favoritesDialog.close()
   logInDialog.close()
 })
+
+
