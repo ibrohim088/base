@@ -251,6 +251,13 @@
   }
 }
 
+@media(width < 460px) {
+  .empty-product_img {
+    height: 200px;
+  }
+
+}
+
 @media(width < 450px) {
 
   .electronik_list {
@@ -266,10 +273,10 @@
   }
 }
 
-@media(width < 426px) {
+/* @media(width < 426px) {
 
-  
+
   .electronik_list_item {
     padding: 5px;
   }
-}
+} */
