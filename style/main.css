@@ -261,7 +261,15 @@
   }
 
   .electronik_list_item {
-    flex: 0 0 190px;
+    flex: 1 0 150px;
+    padding: 5px;
+  }
+}
+
+@media(width < 426px) {
+
+  
+  .electronik_list_item {
     padding: 5px;
   }
 }

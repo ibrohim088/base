@@ -13,7 +13,6 @@ const electronik = [
         count++
         res = num[i] + res
 
-
         if (count === 3 && i != 0) {
           count = 0
           res = " " + res
@@ -64,7 +63,6 @@ const electronik = [
         count++
         res = num[i] + res
 
-
         if (count === 3 && i != 0) {
           count = 0
           res = " " + res
@@ -114,7 +112,6 @@ const electronik = [
         count++
         res = num[i] + res
 
-
         if (count === 3 && i != 0) {
           count = 0
           res = " " + res
@@ -162,7 +159,6 @@ const electronik = [
       for (let i = num.length - 1; i >= 0; i--) {
         count++
         res = num[i] + res
-
 
         if (count === 3 && i != 0) {
           count = 0
@@ -212,7 +208,6 @@ const electronik = [
         count++
         res = num[i] + res
 
-
         if (count === 3 && i != 0) {
           count = 0
           res = " " + res
@@ -260,7 +255,6 @@ const electronik = [
       for (let i = num.length - 1; i >= 0; i--) {
         count++
         res = num[i] + res
-
 
         if (count === 3 && i != 0) {
           count = 0
@@ -310,7 +304,6 @@ const electronik = [
         count++
         res = num[i] + res
 
-
         if (count === 3 && i != 0) {
           count = 0
           res = " " + res
@@ -358,7 +351,6 @@ const electronik = [
       for (let i = num.length - 1; i >= 0; i--) {
         count++
         res = num[i] + res
-
 
         if (count === 3 && i != 0) {
           count = 0
@@ -408,7 +400,6 @@ const electronik = [
         count++
         res = num[i] + res
 
-
         if (count === 3 && i != 0) {
           count = 0
           res = " " + res
@@ -456,7 +447,6 @@ const electronik = [
       for (let i = num.length - 1; i >= 0; i--) {
         count++
         res = num[i] + res
-
 
         if (count === 3 && i != 0) {
           count = 0
