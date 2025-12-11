@@ -392,10 +392,10 @@ const searchIcon = document.querySelector('.searchSVG_IMG')
 input.addEventListener('input', () => {
   const value = input.value.toLowerCase()
   const hasValue = value.length > 0
-  categoryTitle.style.display = hasValue > 0 ? 'none' : 'block'
-  categoryList.style.display = hasValue > 0 ? 'none' : 'block'
+  categoryTitle.style.display = hasValue ? 'none' : 'block'
+  categoryList.style.display = hasValue ? 'none' : 'block'
 
-  if (hasValue > 0) {
+  if (hasValue) {
     // если input.length больше 0 то serach icon меняетса на clear icon
     searchIcon.src = './img/svg/icons/cancel.svg'
     searchIcon.onclick = () => {
@@ -403,7 +403,6 @@ input.addEventListener('input', () => {
       searchIcon.src = './img/svg/icons/search.svg'
       input.focus()
     }
-
 
     if (document.body.clientWidth < 500) {
       btnBlock.style.display = 'none'
@@ -414,7 +413,7 @@ input.addEventListener('input', () => {
     const filteredInputValue = electronik.filter(item => item.name.toLowerCase().includes(value) || item.fullname.toLowerCase().includes(value))
 
     // пустой ненайденые массив равняетса к 0 заначить 0 === 0
-    if (filteredInputValue === 0) {
+    if (filteredInputValue.length === 0) {
       electronikList.innerHTML = `
       <li class="empty-product_item-error">
         <img src="./img/logo/foxs/search.png" alt="">
@@ -432,9 +431,7 @@ input.addEventListener('input', () => {
     btnBlock.style.display = 'flex'
     searchIcon.src = './img/svg/icons/search.svg'
     renderProduct(electronik)
-
   }
-
 })
 
 renderProduct(electronik)
