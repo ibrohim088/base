@@ -114,8 +114,8 @@
   display: none;
   /* display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 10px; */
+  justify-content: space-between; 
+  gap: 10px;*/
 }
 
 .empty-price_list {
@@ -258,5 +258,9 @@
   .electronik_list_item {
     flex: 0 0 190px;
     padding: 5px;
+  }
+
+  .empty-product_name {
+    font-size: 16px;
   }
 }
