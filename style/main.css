@@ -106,16 +106,16 @@
   fill: #91c153;
 }
 
-
 .empty-product_name {
   font-size: 20px;
 }
 
 .empty-about_product_wrapper {
-  display: flex;
+  display: none;
+  /* display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 10px;
+  gap: 10px; */
 }
 
 .empty-price_list {
@@ -197,7 +197,7 @@
 
 @media(width < 550px) {
   .electronik_list_item {
-    flex: 1 0 200px;
+    flex: 1 0 180px;
     border: 1px solid #0000001A;
     border-radius: 20px;
     padding: 10px;
@@ -237,13 +237,17 @@
     font-size: 18px;
   }
 
-  .empty-product_buy {}
-
   .empty-btn {
     padding: 5px 7px 4px;
   }
 
   .empty-product_buy {
     font-size: 12px;
+  }
+}
+
+@media(width < 450px) {
+  .electronik_list_item {
+    flex: 0 0 190px;
   }
 }
