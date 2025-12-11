@@ -3,6 +3,26 @@ const electronik = [
     // airpods
     star: 4.5,
     oldPriceNum: 240000,
+
+    get oldPrice() {
+      let count = 0
+      let res = ''
+      const num = `${this.oldPriceNum}`
+
+      for (let i = num.length - 1; i >= 0; i--) {
+        count++
+        res = num[i] + res
+
+
+        if (count === 3 && i != 0) {
+          count = 0
+          res = " " + res
+        }
+      }
+
+      return res
+    },
+
     get newPrice() {
       const newPrice = this.oldPriceNum - this.discount_count
       const str = `${newPrice}`
@@ -34,6 +54,26 @@ const electronik = [
     // chexol
     star: 5,
     oldPriceNum: 50000,
+
+    get oldPrice() {
+      let count = 0
+      let res = ''
+      const num = `${this.oldPriceNum}`
+
+      for (let i = num.length - 1; i >= 0; i--) {
+        count++
+        res = num[i] + res
+
+
+        if (count === 3 && i != 0) {
+          count = 0
+          res = " " + res
+        }
+      }
+
+      return res
+    },
+
     get newPrice() {
       const newPrice = this.oldPriceNum - this.discount_count
       const str = `${newPrice}`
@@ -65,6 +105,24 @@ const electronik = [
     // type-c sim
     star: 4.5,
     oldPriceNum: 14602,
+    get oldPrice() {
+      let count = 0
+      let res = ''
+      const num = `${this.oldPriceNum}`
+
+      for (let i = num.length - 1; i >= 0; i--) {
+        count++
+        res = num[i] + res
+
+
+        if (count === 3 && i != 0) {
+          count = 0
+          res = " " + res
+        }
+      }
+
+      return res
+    },
     get newPrice() {
       const newPrice = this.oldPriceNum - this.discount_count
       const str = `${newPrice}`
@@ -96,6 +154,24 @@ const electronik = [
     // zashita kamera
     star: 5,
     oldPriceNum: 18424,
+    get oldPrice() {
+      let count = 0
+      let res = ''
+      const num = `${this.oldPriceNum}`
+
+      for (let i = num.length - 1; i >= 0; i--) {
+        count++
+        res = num[i] + res
+
+
+        if (count === 3 && i != 0) {
+          count = 0
+          res = " " + res
+        }
+      }
+
+      return res
+    },
     get newPrice() {
       const newPrice = this.oldPriceNum - this.discount_count
       const str = `${newPrice}`
@@ -127,6 +203,24 @@ const electronik = [
     // yopishqoq chexol ushlagich
     star: 5,
     oldPriceNum: 28325,
+    get oldPrice() {
+      let count = 0
+      let res = ''
+      const num = `${this.oldPriceNum}`
+
+      for (let i = num.length - 1; i >= 0; i--) {
+        count++
+        res = num[i] + res
+
+
+        if (count === 3 && i != 0) {
+          count = 0
+          res = " " + res
+        }
+      }
+
+      return res
+    },
     get newPrice() {
       const newPrice = this.oldPriceNum - this.discount_count
       const str = `${newPrice}`
@@ -158,6 +252,24 @@ const electronik = [
     // telefon ushidigan
     star: 5,
     oldPriceNum: 37259,
+    get oldPrice() {
+      let count = 0
+      let res = ''
+      const num = `${this.oldPriceNum}`
+
+      for (let i = num.length - 1; i >= 0; i--) {
+        count++
+        res = num[i] + res
+
+
+        if (count === 3 && i != 0) {
+          count = 0
+          res = " " + res
+        }
+      }
+
+      return res
+    },
     get newPrice() {
       const newPrice = this.oldPriceNum - this.discount_count
       const str = `${newPrice}`
@@ -189,6 +301,24 @@ const electronik = [
     // smart witch
     star: 4.2,
     oldPriceNum: 65815,
+    get oldPrice() {
+      let count = 0
+      let res = ''
+      const num = `${this.oldPriceNum}`
+
+      for (let i = num.length - 1; i >= 0; i--) {
+        count++
+        res = num[i] + res
+
+
+        if (count === 3 && i != 0) {
+          count = 0
+          res = " " + res
+        }
+      }
+
+      return res
+    },
     get newPrice() {
       const newPrice = this.oldPriceNum - this.discount_count
       const str = `${newPrice}`
@@ -220,6 +350,24 @@ const electronik = [
     // fleshka
     star: 4.2,
     oldPriceNum: 50000,
+    get oldPrice() {
+      let count = 0
+      let res = ''
+      const num = `${this.oldPriceNum}`
+
+      for (let i = num.length - 1; i >= 0; i--) {
+        count++
+        res = num[i] + res
+
+
+        if (count === 3 && i != 0) {
+          count = 0
+          res = " " + res
+        }
+      }
+
+      return res
+    },
     get newPrice() {
       const newPrice = this.oldPriceNum - this.discount_count
       const str = `${newPrice}`
@@ -251,6 +399,24 @@ const electronik = [
     // Stend for LAPTOP
     star: 3.5,
     oldPriceNum: 120000,
+    get oldPrice() {
+      let count = 0
+      let res = ''
+      const num = `${this.oldPriceNum}`
+
+      for (let i = num.length - 1; i >= 0; i--) {
+        count++
+        res = num[i] + res
+
+
+        if (count === 3 && i != 0) {
+          count = 0
+          res = " " + res
+        }
+      }
+
+      return res
+    },
     get newPrice() {
       const newPrice = this.oldPriceNum - this.discount_count
       const str = `${newPrice}`
@@ -282,6 +448,25 @@ const electronik = [
     // SSD
     star: 5,
     oldPriceNum: 60000,
+    get oldPrice() {
+      let count = 0
+      let res = ''
+      const num = `${this.oldPriceNum}`
+
+      for (let i = num.length - 1; i >= 0; i--) {
+        count++
+        res = num[i] + res
+
+
+        if (count === 3 && i != 0) {
+          count = 0
+          res = " " + res
+        }
+      }
+
+      return res
+    },
+
     get newPrice() {
       const newPrice = this.oldPriceNum - this.discount_count
       const str = `${newPrice}`
@@ -315,30 +500,6 @@ const electronik = [
 
 const electronikList = document.querySelector('.electronik_list')
 const input = document.querySelector('.input')
-
-const oldPrice = (num) => {
-  let count = 0
-  let res = ''
-
-
-  for (let i = num.length - 1; i >= 0; i--) {
-    count++
-    res = num[i] + res
-    console.log(res);
-    
-
-    if (count === 3 && i != 0) { 
-      count = 0
-      res = " " + res
-    }
-  }
-
-  console.log(res);
-  
-  return res
-}
-
-
 
 function renderProduct(arr) {
 
@@ -377,7 +538,7 @@ function renderProduct(arr) {
           <div class="empty-about_product_wrapper">
             <ul class="empty-price_list">
               <div class="empty-price_list_wrapper">
-                <li class="empty-price_item empty-old_price">${product.oldPriceNum} sum</li>
+                <li class="empty-price_item empty-old_price">${product.oldPrice} sum</li>
                 
               </div>
               <li class="empty-price_item empty-new_price">${product.newPrice} sum</li>
