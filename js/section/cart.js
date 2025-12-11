@@ -319,8 +319,8 @@ const input = document.querySelector('.input')
 function renderProduct(arr) {
 
 
-  electronikList.innerHTML =
-    `<li class="empty-product_item-error">
+  electronikList.innerHTML = `
+      <li class="empty-product_item-error">
         <img src="./img/logo/foxs/loading.png" alt="">
         <h1>Loading...</h1>
       </li>`
@@ -391,10 +391,11 @@ const searchIcon = document.querySelector('.searchSVG_IMG')
 // ? NAVBAR SEARCH FILTER FUNCTION 
 input.addEventListener('input', () => {
   const value = input.value.toLowerCase()
-  categoryTitle.style.display = value.length > 0 ? 'none' : 'block'
-  categoryList.style.display = value.length > 0 ? 'none' : 'block'
+  const hasValue = value.length > 0
+  categoryTitle.style.display = hasValue > 0 ? 'none' : 'block'
+  categoryList.style.display = hasValue > 0 ? 'none' : 'block'
 
-  if (value.length > 0) {
+  if (hasValue > 0) {
     // если input.length больше 0 то serach icon меняетса на clear icon
     searchIcon.src = './img/svg/icons/cancel.svg'
     searchIcon.onclick = () => {
@@ -413,7 +414,7 @@ input.addEventListener('input', () => {
     const filteredInputValue = electronik.filter(item => item.name.toLowerCase().includes(value) || item.fullname.toLowerCase().includes(value))
 
     // пустой ненайденые массив равняетса к 0 заначить 0 === 0
-    if (filteredInputValue.length === 0) {
+    if (filteredInputValue === 0) {
       electronikList.innerHTML = `
       <li class="empty-product_item-error">
         <img src="./img/logo/foxs/search.png" alt="">
@@ -425,10 +426,15 @@ input.addEventListener('input', () => {
       return
     }
 
+
     renderProduct(filteredInputValue)
   } else {
     btnBlock.style.display = 'flex'
+    searchIcon.src = './img/svg/icons/search.svg'
+    renderProduct(electronik)
+
   }
+
 })
 
 renderProduct(electronik)
