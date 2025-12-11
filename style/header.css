@@ -6,19 +6,25 @@
 .right_slide_show_arrow {
   position: absolute;
   top: 13.3em;
-  width: 37px;
-  height: 37px;
+  height: 34px;
   padding: 5px;
   border-radius: 50%;
   border: 1px solid rgba(0, 0, 0, 0.3);
+  border: none;
   outline: none;
   cursor: pointer;
   z-index: 10;
   transition: all 1s ease;
+  background: rgb(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 
   &:hover,
   &:active {
-    background: #0000001A;
+    /* background: #0000001A; */
+    background: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
   }
 }
 

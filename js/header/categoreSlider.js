@@ -36,6 +36,7 @@ const headContent = document.querySelector('.header_slide_show')
 const categoryesHTML = categoryes.map(categorye => `<img class='header_catrgory_img' src="${categorye.img}" alt="">`).join('')
 headContent.innerHTML = categoryesHTML
 
+
 $(function () {
   $('.header_slide_show').slick({
     dots: false,
@@ -63,3 +64,4 @@ $(function () {
     $('.header_slide_show').slick('slickNext')
   })
 });
+
