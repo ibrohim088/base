@@ -247,6 +247,14 @@
 }
 
 @media(width < 450px) {
+
+  .electronik_list {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 10px;
+  }
+
   .electronik_list_item {
     flex: 0 0 190px;
     padding: 5px;
