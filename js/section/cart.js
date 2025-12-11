@@ -402,6 +402,7 @@ input.addEventListener('input', () => {
       input.value = ''
       searchIcon.src = './img/svg/icons/search.svg'
       input.focus()
+      renderProduct(electronik)
     }
 
     if (document.body.clientWidth < 500) {
