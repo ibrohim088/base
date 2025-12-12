@@ -48,7 +48,6 @@
   transition: all .3 ease;
   border-radius: 8px;
   will-change: transform;
-  
 
   img {
     display: none;
@@ -190,21 +189,21 @@
 
   .nav_list {
     display: flex;
-    align-items: start;
+    align-items: center;
     flex-direction: row;
     justify-content: center;
     gap: 10px;
-    border: 1px solid black;
+    /* border: 1px solid black; */
 
     max-width: 100%;
-    height: 80px;
+    height: 70px;
     padding: 10px;
     position: fixed;
 
-    top: 91%;
+    top: 92.2%;
     left: 0;
     right: 0;
-    bottom: 0px;
+    bottom: 0%;
 
     border-radius: 0;
     transform: translateY(0em);
@@ -221,11 +220,11 @@
     justify-content: center;
     border: none;
     border-radius: 8px;
-    font-size: 16px;
-    gap: 6px;
+    font-size: 14px;
+    gap: 4px;
 
     img {
-      width: 19px;
+      width: 16.5px;
       display: block;
     }
   }
