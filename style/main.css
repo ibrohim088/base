@@ -216,6 +216,10 @@
       font-size: 14px;
     }
   }
+
+  .empty-price_list_wrapper {
+    gap: 4px;
+  }
 }
 
 @media(width < 550px) {
