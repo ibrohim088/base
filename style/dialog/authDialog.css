@@ -1,6 +1,10 @@
 .empty-auth_dialog {
-  max-width: 400px;
+  /* margin: 0 auto;*/
+  max-width: 400px; 
   width: 100%;
+  /* border: none;
+  padding: 10px;
+  border-radius: 16px; */
 }
 
 .empty-auth_title {
@@ -14,15 +18,6 @@
   flex-direction: column;
   gap: 10px;
 
-  /* label {
-    margin-top: 1em;
-
-    &:first-child {
-      margin-top: 0;
-    }
-  } */
-
-
   input {
     width: 100%;
     cursor: pointer;
@@ -35,7 +30,7 @@
   }
 
   button {
-    padding: 15px;  
+    padding: 15px;
     background: #233c66;
     color: #91c153;
     font-size: 18px;
@@ -59,5 +54,30 @@
     color: blue;
     cursor: pointer;
     text-decoration: underline;
+  }
+}
+
+
+@media(width < 550px) {
+  .empty-auth_dialog {
+    max-width: 350px;
+    width: 100%;
+  }
+
+  .empty-auth_title {
+    font-size: 1em;
+  }
+
+  .empty-auth_form {
+
+
+    input {}
+
+    button {}
+  }
+
+  .empty-auth_text {
+
+    span {}
   }
 }

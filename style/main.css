@@ -289,7 +289,9 @@
 
 @media(width < 460px) {
   .empty-product_img {
-    height: 230px;
+    height: 220px;
+    object-fit: fill;
+
   }
 
 }
