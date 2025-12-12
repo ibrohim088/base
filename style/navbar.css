@@ -181,6 +181,7 @@
 @media(width < 550px) {
   body {
     overscroll-behavior-y: none;
+    padding-bottom: 0;
   }
 
   .nav_content {
@@ -191,26 +192,25 @@
     display: flex;
     align-items: center;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-around;
     gap: 10px;
-    /* border: 1px solid black; */
 
     max-width: 100%;
     height: 70px;
     padding: 10px;
     position: fixed;
 
-    top: 92.2%;
+    /* top: 0; */
     left: 0;
     right: 0;
-    bottom: 0%;
+    bottom: 0;
 
     border-radius: 0;
-    transform: translateY(0em);
+    transform: none;
   }
 
   .nav_list--visible {
-    display: none;
+    display: flex;
   }
 
   .nav_list_item {
