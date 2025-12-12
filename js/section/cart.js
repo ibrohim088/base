@@ -529,7 +529,7 @@ function renderProduct(arr) {
             <ul class="empty-price_list">
               <div class="empty-price_list_wrapper">
                 <li class="empty-price_item empty-old_price">${product.oldPrice} sum</li>
-                
+                <li class="empty-price_item empty-price_discount">-${product.discount}</li>                
               </div>
               <li class="empty-price_item empty-new_price">${product.newPrice} sum</li>
             </ul>
@@ -541,7 +541,6 @@ function renderProduct(arr) {
       </div>
     </li>
   `).join('')
-      {/* <li class="empty-price_item empty-price_discount">-${product.discount}</li> */ }
     }
 
     electronikList.innerHTML = html

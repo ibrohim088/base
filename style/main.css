@@ -72,7 +72,7 @@
   width: 100%;
   height: 270px;
   border: 1px solid #0000001A;
-  border-radius: 14px;
+  border-radius: 16px;
   object-fit: cover;
 }
 
@@ -141,8 +141,8 @@
 }
 
 .empty-price_discount {
-  background: red;
-  color: white;
+  background: none;
+  color: red;
   padding: 2px;
   border-radius: 3px;
   font-size: 12px;
@@ -227,6 +227,10 @@
     font-size: 14px;
   }
 
+  .empty-price_discount {
+    font-size: 11px;
+  }
+
   .empty-new_price {
     color: #ff4444;
     font-size: 16px;
@@ -239,7 +243,6 @@
     padding: 10px;
 
     &:hover {
-      transform: scale(1.010);
       border: 1px solid #0000001A;
       -webkit-box-shadow: none;
       -moz-box-shadow: none;
@@ -255,11 +258,7 @@
   }
 
   .empty-product_img {
-    width: 100%;
     height: 240px;
-    border: 1px solid #0000001A;
-    border-radius: 14px;
-    object-fit: cover;
   }
 }
 
