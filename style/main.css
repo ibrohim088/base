@@ -90,8 +90,7 @@
   transition: background 0.2s ease;
 }
 
-.empty-product_favorites:hover,
-.empty-product_favorites:focus,
+
 .empty-product_favorites:active,
 .empty-product_favorites.is-active {
   background: #0000001A;
@@ -103,8 +102,6 @@
   transition: fill 0.2s ease, stroke 0.2s ease;
 }
 
-.empty-product_favorites:hover path,
-.empty-product_favorites:focus path,
 .empty-product_favorites:active path,
 .empty-product_favorites.is-active path {
   fill: red;
