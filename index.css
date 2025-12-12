@@ -8,6 +8,7 @@
 
 body {
   padding: 10px;
+  padding-bottom: 75px;
   overscroll-behavior-y: none;
 }
 
