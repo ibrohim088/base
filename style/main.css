@@ -82,9 +82,9 @@
   right: 6px;
   width: 30px;
   height: 30px;
-  padding: 5px;
+  padding: 5px 5px 3px 5px;
   background: #fff;
-  border-radius: 10px;
+  border-radius: 5px;
   border: 1px solid #0000001A;
   cursor: pointer;
   transition: background 0.2s ease;
@@ -107,7 +107,8 @@
 .empty-product_favorites:focus path,
 .empty-product_favorites:active path,
 .empty-product_favorites.is-active path {
-  fill: #91c153;
+  fill: red;
+  stroke: #0000001A;
 }
 
 .empty-product_name {
@@ -220,6 +221,19 @@
   .empty-price_list_wrapper {
     gap: 4px;
   }
+
+
+
+  .empty-product_favorites {
+    width: 26px;
+    height: 26px;
+    padding: 4px 4px 3px 4px;
+    background: #fff;
+    border-radius: 5px;
+    border: 1px solid #0000001A;
+    cursor: pointer;
+    transition: background 0.2s ease;
+  }
 }
 
 @media(width < 550px) {
@@ -278,7 +292,7 @@
 
 @media(width < 460px) {
   .empty-product_img {
-    height: 200px;
+    height: 230px;
   }
 
 }
