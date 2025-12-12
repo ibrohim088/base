@@ -200,13 +200,14 @@
     padding: 10px;
     position: fixed;
 
-    /* top: 0; */
+    top: 92%;
     left: 0;
     right: 0;
     bottom: 0;
 
     border-radius: 0;
-    transform: none;
+    transform: translateZ(0);
+    will-change: transform;
   }
 
   .nav_list--visible {
