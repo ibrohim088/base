@@ -8,6 +8,7 @@
 
 body {
   padding: 10px;
+  overscroll-behavior-y: none;
 }
 
 ul {
@@ -111,6 +112,3 @@ a {
     top: 7em;
   }
 }
-
-
-
