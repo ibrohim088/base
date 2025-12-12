@@ -1,6 +1,6 @@
 .empty-auth_dialog {
   /* margin: 0 auto;*/
-  max-width: 400px; 
+  max-width: 400px;
   width: 100%;
   /* border: none;
   padding: 10px;
@@ -65,19 +65,31 @@
   }
 
   .empty-auth_title {
-    font-size: 1em;
+    font-size: 1.1em;
   }
 
   .empty-auth_form {
+    margin-bottom: 1em;
 
 
-    input {}
+    input {
+      padding: 10px;
+      font-size: 16px;
+    }
 
-    button {}
+    button {
+      padding: 10px;
+      font-size: 16px;
+    }
+
+
   }
 
   .empty-auth_text {
+    font-size: 12px;
 
-    span {}
+    span {
+      font-size: 12px;
+    }
   }
 }
