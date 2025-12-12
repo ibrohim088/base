@@ -555,7 +555,7 @@ function renderProduct(arr) {
       });
     })
 
-  }, 1200)
+  }, 1500)
 }
 
 const categoryList = document.querySelector('.header_content')
