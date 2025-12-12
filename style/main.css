@@ -46,7 +46,7 @@
 .electronik_list_item {
   flex: 0 1 250px;
   border: 1px solid #0000001A;
-  border-radius: 20px;
+  border-radius: 10px;
   padding: 10px;
   transition:
     border .4s ease,
@@ -72,7 +72,7 @@
   width: 100%;
   height: 270px;
   border: 1px solid #0000001A;
-  border-radius: 16px;
+  border-radius: 6.5px;
   object-fit: cover;
 }
 
@@ -129,9 +129,9 @@
 
 .empty-price_list_wrapper {
   display: flex;
-  align-items: center;
   gap: 6px;
-  margin-bottom: 4px;
+  margin-bottom: 2px;
+  /* border: 1px solid black; */
 }
 
 .empty-old_price {
@@ -141,12 +141,12 @@
 }
 
 .empty-price_discount {
-  background: none;
+  /* background: none; */
   color: red;
-  padding: 2px;
   border-radius: 3px;
-  font-size: 12px;
+  font-size: 13px;
   font-weight: bold;
+  padding-top: 2px;
 }
 
 .empty-new_price {
@@ -158,7 +158,7 @@
 .empty-product_buy {
   background: #233c66;
   transition: border 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
-  border-radius: 16px;
+  border-radius: 8px !important;
   color: #91c153;
 }
 
@@ -239,7 +239,6 @@
 
   .electronik_list_item {
     flex: 1 0 180px;
-    border-radius: 20px;
     padding: 10px;
 
     &:hover {
