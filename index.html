@@ -34,11 +34,14 @@
   <!-- slick slider link style -->
   <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
 
+  <!-- leaflet link style -->
+  <!-- <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" /> -->
+
   <title>ShopSamrt</title>
 </head>
 
 <style>
-
 </style>
 
 <body>
@@ -110,6 +113,34 @@
         </div>
       </dialog>
 
+      <!-- basket dialog block -->
+      <dialog class="basket_dialog empty-dialog">
+        <div class="empty_dialog_title">
+          <h2>Basket</h2>
+
+          <button class="clouseBasketDialog empty-dialog_close">
+            <img src="./img/svg/icons/cancel.svg" alt="">
+          </button>
+        </div>
+
+        <div class="dialog_basket_content">
+        </div>
+      </dialog>
+
+      <!-- Favorites dialog block -->
+      <dialog class="favorites_dialog empty-dialog">
+        <div class="empty_dialog_title">
+          <h2>Favorites</h2>
+
+          <button class="clouseFavoritesDialog empty-dialog_close">
+            <img src="./img/svg/icons/cancel.svg" alt="">
+          </button>
+        </div>
+
+        <div class="dialog_favorites_content">
+        </div>
+      </dialog>
+
       <!-- Location dialog block -->
       <dialog class="location_dialog empty-dialog">
         <div class="empty_dialog_title">
@@ -122,9 +153,12 @@
         <div class="dialog_location_content">
 
           <div class="dialog_location_iframe_block">
+            <!-- <div class="map" id="map"></div> -->
+
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1536049.2008263702!2d69.9580706!3d41.241464650000005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38afbcaa73f2ce4d%3A0x57f19ae913e2f367!2z0KLQsNGI0LrQtdC90YLRgdC60LDRjyDQvtCx0LvQsNGB0YLRjA!5e0!3m2!1sru!2s!4v1764148943542!5m2!1sru!2s"
-              style="border:0;" allowfullscreen="" loading="fast" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              style="border:0;" allowfullscreen="" loading="fast" referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
           </div>
           <form class="dialog_form">
             <div class="dialog_form_wrapper">
@@ -158,34 +192,6 @@
 
             <button class="dialog_form_btn empty-btn">Next</button>
           </form>
-        </div>
-      </dialog>
-
-      <!-- basket dialog block -->
-      <dialog class="basket_dialog empty-dialog">
-        <div class="empty_dialog_title">
-          <h2>Basket</h2>
-
-          <button class="clouseBasketDialog empty-dialog_close">
-            <img src="./img/svg/icons/cancel.svg" alt="">
-          </button>
-        </div>
-
-        <div class="dialog_basket_content">
-        </div>
-      </dialog>
-
-      <!-- Favorites dialog block -->
-      <dialog class="favorites_dialog empty-dialog">
-        <div class="empty_dialog_title">
-          <h2>Favorites</h2>
-
-          <button class="clouseFavoritesDialog empty-dialog_close">
-            <img src="./img/svg/icons/cancel.svg" alt="">
-          </button>
-        </div>
-
-        <div class="dialog_favorites_content">
         </div>
       </dialog>
 
@@ -380,7 +386,7 @@
           </li>
 
           <li class="footer_bottom__list_item">
-            «2025© OOO «ShopSmart». All rights reserved» v-1.0.0
+            «2025© OOO «ShopSmart». All rights reserved» 1.0.0
           </li>
         </ul>
       </div>
@@ -388,15 +394,23 @@
   </footer>
 
 </body>
+
 <!-- CONNECTION LIBRARY || СОЕДЕННЁНЫЕ БИБЛИОТЕКА -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<!-- leaflet script -->
+<!-- <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+  integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script> -->
 
 <script src="./main.js"></script>
 
 <script src="./js/header/categoreSlider.js"></script>
 
 <script src="./js/navbar/navbar.js"></script>
+
+<script src="./js/navbar/favorites.js"></script>
+<!-- <script src="./js/navbar/location.js"></script> -->
+
 <script src="./js/navbar/auth/logIn.js"></script>
 <script src="./js/navbar/auth/register.js"></script>
 <script src="./js/navbar/auth/fullname.js"></script>
