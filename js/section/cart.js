@@ -552,8 +552,8 @@ function renderProduct(arr) {
 
     const showFavorites = () => favDialogContent.innerHTML = favorites.join('') || 
         `<li class="empty-product_item-error">
-          <img src="./img/logo/foxs/nothing.png" alt="">
-          <h1>There are no products yet</h1>
+          <img src="./img/logo/foxs/favorites.png" alt="">
+          <h1>There is nothing in the favorites</h1>
         </li>`
 
     favoriteBtn.forEach((btn) => {
