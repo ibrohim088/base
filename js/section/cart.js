@@ -548,26 +548,30 @@ function renderProduct(arr) {
     // ? FAVORITIES  =============================================================================================================
 
     const favoriteBtn = document.querySelectorAll('.empty-product_favorites');
+    let favorites = []
 
-    const getFavorites = () => JSON.parse(localStorage.getItem('favorites')) || []
-
-    const saveFavorites = (arr) => localStorage.setItem('favorites', JSON.stringify(arr))
+    const showFavorites = () => favDialogContent.innerHTML = favorites.join(', ') || 'Empty'
 
     favoriteBtn.forEach((btn) => {
       // ! В JavaScript любой атрибут data-* попадает в объект dataset
       const id = btn.dataset.id
-
       console.log(id);
-
 
       btn.addEventListener('click', function (e) {
         e.preventDefault()
         this.classList.toggle('is-active');
+
+        if (this.classList.contains('is-active')) {
+          favorites.push(id)
+        } else {
+          favorites = favorites.filter(item = item !== id)
+        }
+
+        showFavorites()
       });
     })
 
-
-
+    showFavorites()
     // ? FAVORITIES  =============================================================================================================
     // ? FAVORITIES  =============================================================================================================
     // ? FAVORITIES  =============================================================================================================
@@ -575,6 +579,7 @@ function renderProduct(arr) {
 
   }, 1500)
 }
+
 
 const categoryList = document.querySelector('.header_content')
 const btnBlock = document.querySelector('.btn_wrapper')
