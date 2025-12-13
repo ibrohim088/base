@@ -496,7 +496,7 @@ function renderProduct(arr) {
 
   electronikList.innerHTML = `
       <li class="empty-product_item-error">
-        <img src="./img/logo/foxs/loading.png" alt="">
+        <img src="/img/logo/foxs/loading.png" alt="">
         <h1>Loading...</h1>
       </li>`
 
@@ -506,7 +506,7 @@ function renderProduct(arr) {
     if (arr.length === 0) {
       html =
         `<li class="empty-product_item-error">
-          <img src="./img/logo/foxs/nothing.png" alt="">
+          <img src="/img/logo/foxs/nothing.png" alt="">
           <h1>There are no products yet</h1>
         </li>`
     } else {
@@ -552,7 +552,7 @@ function renderProduct(arr) {
 
     const showFavorites = () => favDialogContent.innerHTML = favorites.join('') || 
         `<li class="empty-product_item-error">
-          <img src="./img/logo/foxs/favorites.png" alt="">
+          <img src="/img/logo/foxs/favorites.png" alt="">
           <h1>There is nothing in the favorites</h1>
         </li>`
 
