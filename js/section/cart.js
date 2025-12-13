@@ -550,7 +550,11 @@ function renderProduct(arr) {
     const favoriteBtn = document.querySelectorAll('.empty-product_favorites');
     let favorites = []
 
-    const showFavorites = () => favDialogContent.innerHTML = favorites.join('')
+    const showFavorites = () => favDialogContent.innerHTML = favorites.join('') || 
+        `<li class="empty-product_item-error">
+          <img src="./img/logo/foxs/nothing.png" alt="">
+          <h1>There are no products yet</h1>
+        </li>`
 
     favoriteBtn.forEach((btn) => {
       // ! В JavaScript любой атрибут data-* попадает в объект dataset
@@ -565,7 +569,7 @@ function renderProduct(arr) {
           const product = this.closest('.electronik_list_item')
           favorites.push(product.outerHTML)
         } else {
-          favorites = favorites.filter(item = item !== id)
+          favorites = favorites.filter(card => !card.includes(`data - id="${id}"`))
         }
 
         showFavorites()
@@ -615,11 +619,11 @@ input.addEventListener('input', () => {
     // пустой ненайденые массив равняетса к 0 заначить 0 === 0
     if (filteredInputValue.length === 0) {
       electronikList.innerHTML = `
-      <li class="empty-product_item-error">
+      < li class="empty-product_item-error" >
         <img src="./img/logo/foxs/search.png" alt="">
-        <h1>There is nothing suitable for what you wrote.</h1>
-        <p>There may be a mistake in the product name or we don't have that product yet.</p>
-      </li>`
+          <h1>There is nothing suitable for what you wrote.</h1>
+          <p>There may be a mistake in the product name or we don't have that product yet.</p>
+        </li>`
 
       // нужен для того чтобы остонавть поиск чтобы он не продолжалса
       return

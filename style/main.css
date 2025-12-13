@@ -45,6 +45,7 @@
 
 .electronik_list_item {
   flex: 0 1 250px;
+  width: min-content;
   height: max-content;
   border: 1px solid #0000001A;
   border-radius: 10px;
@@ -305,6 +306,6 @@
   }
 
   .electronik_list_item {
-    flex: 1 0 170px;
+    /* flex: 0 0 170px; */
   }
 }

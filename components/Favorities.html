@@ -6,13 +6,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- UI desing -->
   <link rel="stylesheet" href="../style/Ui/select.css">
+  <link rel="stylesheet" href="../style/UI/categoryIcon.css">
 
   <!-- dialog modal style import -->
   <link rel="stylesheet" href="../style/dialog/empty-dialog.css">
-  <link rel="stylesheet" href="../style//dialog/categoryDialog.css">
-  <link rel="stylesheet" href="../style//dialog/locationDialog.css">
-  <link rel="stylesheet" href="../style/dialog/registerDialog.css">
-  <link rel="stylesheet" href="../style/dialog/logInDialog.css">
+  <link rel="stylesheet" href="../style/dialog/categoryDialog.css">
+  <link rel="stylesheet" href="../style/dialog/locationDialog.css">
+  <link rel="stylesheet" href="../style/dialog/favoritesDialog.css">
+  <link rel="stylesheet" href="../style/dialog/authDialog.css">
 
   <!-- header style import -->
   <link rel="stylesheet" href="../style/header.css">
@@ -30,11 +31,17 @@
   <link rel="stylesheet" href="../style/UI/dialog.css">
   <link rel="stylesheet" href="../index.css">
 
+  <!-- slick slider link style -->
+  <link rel="stylesheet" type="text/css" href="/cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+
+  <!-- leaflet link style -->
+  <!-- <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" /> -->
+
   <title>ShopSamrt</title>
 </head>
 
 <style>
-
 </style>
 
 <body>
@@ -45,27 +52,33 @@
           <img class="shopsmart_logo" src="../img/logo/ShopSmart_text.png" alt="">
         </a>
         <div class="nav_input_box">
-          <input class="input" type="text" placeholder="Search product...">
-          <img class="searchSVG_IMG" src="../img/svg/icons/search.svg" alt="">
+          <input class="input" type="text" placeholder="Search product..." autofocus>
+          <img style="cursor: pointer;" class="searchSVG_IMG" src="../img/svg/icons/search.svg" alt="">
+          <!-- <img class="removeLen" src="../img/svg/icons/cancel.svg" alt=""> -->
         </div>
         <div class="overlay"></div>
         <ul class="nav_list">
           <li class="nav_list_item category_item">
+            <img src="../img/svg/icons/categoryIcon.svg" alt="">
             Category
-            <img class="heartSVG_IMG" src="../img/svg/icons/layers.svg" alt="">
           </li>
-          <li class="nav_list_item cart_item">
+          <li class="nav_list_item basket_item">
+            <img class="basketSVG_IMG" src="../img/svg/icons/basket.svg" alt="">
             Basket
-            <img class="cartSVG_IMG" src="../img/svg/icons/cart.svg" alt="">
           </li>
           <li class="nav_list_item favorites_item">
-            Favorites
             <img class="heartSVG_IMG" src="../img/svg/icons/heart.svg" alt="">
+            Favorites
           </li>
           <li class="nav_list_item location_item">
-            Location
             <img class="mapMarkerSVG_IMG" src="../img/svg/icons/mapMarker.svg" alt="">
+            Location
           </li>
+
+          <!-- <li class="nav_list_item nav_logIn">
+            <img class="logInSVG_IMG" src="../img/svg/icons/logIn.svg" alt="">
+            <p>Log In</p>
+          </li> -->
         </ul>
         <div class="btn_wrapper">
           <select class="nav_list_item_select language_item" name="lan" required>
@@ -78,6 +91,7 @@
             <p>Log In</p>
             <img class="logInSVG_IMG" src="../img/svg/icons/logIn.svg" alt="">
           </button>
+
           <button class="burgerMenu">
             <img class="logInSVG_IMG" src="../img/svg/icons/burgerMenu.svg" alt="">
           </button>
@@ -99,6 +113,34 @@
         </div>
       </dialog>
 
+      <!-- basket dialog block -->
+      <dialog class="basket_dialog empty-dialog">
+        <div class="empty_dialog_title">
+          <h2>Basket</h2>
+
+          <button class="clouseBasketDialog empty-dialog_close">
+            <img src="../img/svg/icons/cancel.svg" alt="">
+          </button>
+        </div>
+
+        <div class="dialog_basket_content">
+        </div>
+      </dialog>
+
+      <!-- Favorites dialog block -->
+      <dialog class="favorites_dialog empty-dialog">
+        <div class="empty_dialog_title">
+          <h2>Favorites</h2>
+
+          <button class="clouseFavoritesDialog empty-dialog_close">
+            <img src="../img/svg/icons/cancel.svg" alt="">
+          </button>
+        </div>
+
+        <!-- <div class="dialog_favorites_content">
+        </div> -->
+      </dialog>
+
       <!-- Location dialog block -->
       <dialog class="location_dialog empty-dialog">
         <div class="empty_dialog_title">
@@ -111,10 +153,14 @@
         <div class="dialog_location_content">
 
           <div class="dialog_location_iframe_block">
+            <!-- <div class="map" id="map"></div> -->
+
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1536049.2008263702!2d69.9580706!3d41.241464650000005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38afbcaa73f2ce4d%3A0x57f19ae913e2f367!2z0KLQsNGI0LrQtdC90YLRgdC60LDRjyDQvtCx0LvQsNGB0YLRjA!5e0!3m2!1sru!2s!4v1764148943542!5m2!1sru!2s"
-              style="border:0;" allowfullscreen="" loading="fast" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              style="border:0;" allowfullscreen="" loading="fast" referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
           </div>
+
           <form class="dialog_form">
             <div class="dialog_form_wrapper">
               <h2 class="dialog_form_title">Select pick-up item</h2>
@@ -151,80 +197,62 @@
       </dialog>
 
       <!-- logIn dialog block -->
-      <dialog class="logIn_dialog empty-dialog">
+      <dialog class="logIn_dialog empty-auth_dialog empty-dialog">
         <div class="empty_dialog_title">
-          <h2>Log In</h2>
+          <h2></h2>
+
           <button class="clouseLocationDialog empty-dialog_close">
             <img src="../img/svg/icons/cancel.svg" alt="">
           </button>
         </div>
 
-        <form class="login_form">
-          <div class="form_group">
-            <label>Email</label>
-            <input type="email" placeholder="example@mail.com" required pattern=".+@example\.com">
-          </div>
+        <h1 class="empty-auth_title">Log In in Shop Smart</h1>
 
-          <div class="form_group">
-            <label>Password</label>
-            <input type="password" placeholder="••••••••" required maxlength="8">
-          </div>
-
-          <button class="login_btn" type="submit">Sign In</button>
-
-          <p class="login_note">
-            Don't have an account? <a href="#logIn" class="register">Register</a>
-          </p>
+        <form class="empty-auth_form" autocomplete="off">
+          <input class="logInInput" type="tel" placeholder="+998 00 - 000 - 00" value="+998" maxlength="17">
+          <button class="logIn_btn empty-btn form_auth-btn">Submit</button>
         </form>
+
+        <p class="empty-auth_text">If you already Existed <span class="nav_register">register</span></p>
       </dialog>
 
       <!-- register dialog block -->
-      <dialog class="register_dialog empty-dialog">
+      <dialog class="register_dialog empty-auth_dialog empty-dialog">
         <div class="empty_dialog_title">
-          <h2>Register</h2>
-          <button class="closeRegisterDialog empty-dialog_close">
+          <h2></h2>
+
+          <button class="clouseLocationDialog empty-dialog_close">
             <img src="../img/svg/icons/cancel.svg" alt="">
           </button>
         </div>
 
-        <form class="register_form">
-          <div class="form_group">
-            <label>Full Name</label>
-            <input type="text" placeholder="Your name" required>
-          </div>
+        <h1 class="empty-auth_title">Register in Shop Smart</h1>
 
-          <div class="form_group">
-            <label>Email</label>
-            <input type="email" placeholder="example@mail.com" required>
-          </div>
+        <form class="empty-auth_form" autocomplete="off">
+          <!-- <label for="fullname">Full Name</label> -->
+          <input class="fullname" type="text" id="fullname" placeholder="Fullname" autofocus>
 
-          <div class="form_group">
-            <label>Password</label>
-            <input type="password" placeholder="••••••••" required>
-          </div>
+          <!-- <label for="birthday">Date</label> -->
+          <input class="inputDate" type="datetime" id="birthday" placeholder="DD.MM.YYYY" maxlength="10">
 
-          <div class="form_group">
-            <label>Confirm Password</label>
-            <input type="password" placeholder="••••••••" required>
-          </div>
+          <!-- <label for="email">Email</label> -->
+          <input type="email" id="email" placeholder="Email" pattern=".+@gamil.com">
 
-          <button class="login_btn" type="submit">Create Account</button>
+          <!-- <label for="password">Password</label> -->
+          <input type="password" id="password" placeholder="Password" maxlength="8">
 
-          <p class="login_note">
-            Already have an account? <a href="#register" class="nav_logIn">Log In</a>
-          </p>
+          <!-- <label for="phone">Phone Number</label> -->
+          <input class="logInInput" type="tel" placeholder="+998 00-000 -00" value="+998 " maxlength="17">
+
+          <button class="register_btn empty-btn form_auth-btn">Submit</button>
         </form>
       </dialog>
-
     </nav>
   </header>
 
   <main class="main container">
-    <section class="electronik">
-      <h1 class="electronik_content-text empty_content-text">Favorites</h1>
-      <!-- <ul class="electronik_list empty-product_list"></ul> -->
-      <ul class="favorities_list empty-product_list"></ul>
-    </section>
+    <div class="dialog_favorites_content">
+    </div>
   </main>
 
   <footer class="footer container">
@@ -236,12 +264,12 @@
             <h1>About</h1>
           </li>
           <li class="footer_empty-item">
-            <a href="./page/about/pickupPoint.html">
+            <a href="../page/about/pickupPoint.html">
               Pickup point
             </a>
           </li>
           <li class="footer_empty-item">
-            <a href="./page/about/jobOpenings.html">
+            <a href="../page/about/jobOpenings.html">
               Job openings
             </a>
           </li>
@@ -253,12 +281,12 @@
             <h1>To User</h1>
           </li>
           <li class="footer_empty-item">
-            <a href="./page/toUser/Contact.html">
+            <a href="../page/toUser/Contact.html">
               Contact us
             </a>
           </li>
           <li class="footer_empty-item">
-            <a href="./page/toUser/Q&A.html">
+            <a href="../page/toUser/Q&A.html">
               Q & A (Question and Answers)
             </a>
           </li>
@@ -270,17 +298,17 @@
             <h1>For businesses</h1>
           </li>
           <li class="footer_empty-item">
-            <a href="./page/businesses/sell.html">
+            <a href="../page/businesses/sell.html">
               Sell on ShopSamrt
             </a>
           </li>
           <li class="footer_empty-item">
-            <a href="./page/businesses/sellerLogin.html">
+            <a href="../page/businesses/sellerLogin.html">
               Seller login
             </a>
           </li>
           <li class="footer_empty-item">
-            <a href="./page/businesses/openPoint.html">
+            <a href="../page/businesses/openPoint.html">
               Open a pickup point
             </a>
           </li>
@@ -292,10 +320,10 @@
             <h1>Download the app</h1>
           </li>
           <li class="footer_empty-item empty-dow">
-            <a href="./page/download/appStory.html">
+            <a href="../page/download/appStory.html">
               <img src="../img/svg/download/appStory.svg" alt="">
             </a>
-            <a href="./page/download/playMarket.html">
+            <a href="../page/download/playMarket.html">
               <img src="../img/svg/download/playMarket.svg" alt="">
             </a>
           </li>
@@ -328,18 +356,36 @@
           </li>
 
           <li class="footer_bottom__list_item">
-            «2025© OOO «ShopSmart». INN 309376127. All rights reserved»
+            «2025© OOO «ShopSmart». All rights reserved» 1.0.0
           </li>
         </ul>
       </div>
     </div>
   </footer>
+
 </body>
 
+<!-- CONNECTION LIBRARY || СОЕДЕННЁНЫЕ БИБЛИОТЕКА -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<!-- leaflet script -->
+<!-- <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+  integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script> -->
+
 <script src="../main.js"></script>
-<script src="../js/navbar.js"></script>
-<script src="../js/header.js"></script>
-<script src="../js/section/electronik.js"></script>
-<script src="../js/section/newCollection.js"></script>
+
+<script src="../js/header/categoreSlider.js"></script>
+
+<script src="../js/navbar/navbar.js"></script>
+
+<script src="../js/navbar/favorites.js"></script>
+<!-- <script src="../js/navbar/location.js"></script> -->
+
+<script src="../js/navbar/auth/logIn.js"></script>
+<script src="../js/navbar/auth/register.js"></script>
+<script src="../js/navbar/auth/fullname.js"></script>
+
+<script src="../js/section/cart.js"></script>
+<script src="../js/section/images.js"></script>
 
 </html>

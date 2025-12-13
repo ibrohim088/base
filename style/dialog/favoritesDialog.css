@@ -3,4 +3,18 @@
   align-items: center;
   flex-wrap: wrap;
   gap: 10px;
+
+  .electronik_list_item {
+    /* flex: 1 0 180px; */
+  }
+}
+
+
+@media (width < 550px) {
+  .dialog_favorites_content {
+   
+    .electronik_list_item {
+      flex: 0 1 190px;
+    }
+  }
 }
