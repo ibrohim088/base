@@ -304,8 +304,4 @@
     flex-wrap: wrap;
     gap: 10px;
   }
-
-  .electronik_list_item {
-    /* flex: 0 0 170px; */
-  }
 }
