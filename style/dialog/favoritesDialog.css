@@ -4,8 +4,7 @@
   flex-wrap: wrap;
   gap: 10px;
 
-  .electronik_list_item {
-    /* flex: 1 0 180px; */
+  .electronik_list_item { 
   }
 }
 
