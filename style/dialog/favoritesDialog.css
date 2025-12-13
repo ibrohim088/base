@@ -3,16 +3,40 @@
   align-items: center;
   flex-wrap: wrap;
   gap: 10px;
+  border: 1px solid black;
+  overflow-y: auto;
+  height: 550px;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 
-  /* .electronik_list_item {} */
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }
 
+/* Убираем скролл-бар для Chrome, Safari и Opera */
+/* .dialog_favorites_content */
 
-@media (width < 550px) {
+@media (width < 580px) {
   .dialog_favorites_content {
-   
+
+
     .electronik_list_item {
-      flex: 0 1 210px;
+      flex: 0 1 calc(50% - 10px);
+    }
+  }
+}
+
+@media (width < 450px) {
+  .dialog_favorites_content {
+
+
+    .electronik_list_item {
+      flex: 0 1 calc(50% - 10px);
+
+      img {
+        height: 200px;
+      }
     }
   }
 }
