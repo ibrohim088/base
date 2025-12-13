@@ -550,7 +550,7 @@ function renderProduct(arr) {
     const favoriteBtn = document.querySelectorAll('.empty-product_favorites');
     let favorites = []
 
-    const showFavorites = () => favDialogContent.innerHTML = favorites.join(', ') || 'Empty'
+    const showFavorites = () => favDialogContent.innerHTML = favorites.join('')
 
     favoriteBtn.forEach((btn) => {
       // ! В JavaScript любой атрибут data-* попадает в объект dataset
@@ -562,7 +562,8 @@ function renderProduct(arr) {
         this.classList.toggle('is-active');
 
         if (this.classList.contains('is-active')) {
-          favorites.push(id)
+          const product = this.closest('.electronik_list_item')
+          favorites.push(product.outerHTML)
         } else {
           favorites = favorites.filter(item = item !== id)
         }
