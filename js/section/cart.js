@@ -550,8 +550,8 @@ function renderProduct(arr) {
     const favoriteBtn = document.querySelectorAll('.empty-product_favorites');
     let favorites = []
 
-    const showFavorites = () => favDialogContent.innerHTML = favorites.join('') || 
-        `<li class="empty-product_item-error">
+    const showFavorites = () => favDialogContent.innerHTML = favorites.join('') ||
+      `<li class="empty-product_item-error">
           <img src="/img/logo/foxs/favorites.png" alt="">
           <h1>There is nothing in the favorites</h1>
         </li>`
@@ -619,8 +619,8 @@ input.addEventListener('input', () => {
     // пустой ненайденые массив равняетса к 0 заначить 0 === 0
     if (filteredInputValue.length === 0) {
       electronikList.innerHTML = `
-      < li class="empty-product_item-error" >
-        <img src="./img/logo/foxs/search.png" alt="">
+        <li class="empty-product_item-error" >
+          <img src="/img/logo/foxs/search.png" alt="">
           <h1>There is nothing suitable for what you wrote.</h1>
           <p>There may be a mistake in the product name or we don't have that product yet.</p>
         </li>`
