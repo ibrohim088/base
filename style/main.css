@@ -45,6 +45,7 @@
 
 .electronik_list_item {
   flex: 0 1 250px;
+  height: max-content;
   border: 1px solid #0000001A;
   border-radius: 10px;
   padding: 10px;
@@ -254,7 +255,7 @@
 
   .electronik_list_item {
     flex: 1 0 180px;
-    padding: 10px;
+    padding: 5px;
 
     &:hover {
       -webkit-box-shadow: none;
@@ -290,7 +291,6 @@
   .empty-product_img {
     height: 220px;
     object-fit: fill;
-
   }
 
 }
@@ -305,6 +305,6 @@
   }
 
   .electronik_list_item {
-    flex: 1 0 150px;
+    flex: 1 0 170px;
   }
 }
