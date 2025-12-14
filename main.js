@@ -492,8 +492,6 @@ const electronikList = document.querySelector('.electronik_list')
 const input = document.querySelector('.input')
 
 function renderProduct(arr) {
-
-
   electronikList.innerHTML = `
       <li class="empty-product_item-error">
         <img src="/img/logo/foxs/loading.png" alt="">
@@ -527,7 +525,6 @@ function renderProduct(arr) {
               <ul class="empty-price_list">
                 <div class="empty-price_list_wrapper">
                   <li class="empty-price_item empty-old_price">${product.oldPrice} sum</li>
-                  <li class="empty-price_item empty-price_discount">-${product.discount}</li>                
                 </div>
                 <li class="empty-price_item empty-new_price">${product.newPrice} sum</li>
               </ul>
@@ -539,6 +536,8 @@ function renderProduct(arr) {
         </div>
       </li>`).join('')
     }
+
+    // <li class="empty-price_item empty-price_discount">-${product.discount}</li>
 
     electronikList.innerHTML = html
 

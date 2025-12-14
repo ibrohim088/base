@@ -31,12 +31,11 @@
   <link rel="stylesheet" href="../style/UI/dialog.css">
   <link rel="stylesheet" href="../index.css">
 
+  <!-- page style -->
+  <link rel="stylesheet" href="../style/styleProduct.css">
+
   <!-- slick slider link style -->
   <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
-
-  <!-- leaflet link style -->
-  <!-- <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" /> -->
 
   <title>ShopSamrt</title>
 </head>
@@ -256,10 +255,101 @@
   </header>
 
   <main class="main container">
-    <h1>Product Page</h1>
+    <h1 class="empty_content-text">Product Page</h1>
 
     <section class="products_section">
+      <div class="container">
+        <div class="product_wrapper">
+          <div class="product_imgs_content">
+            <ul class="img_list">
+              <li class="img_list_item is-selected_img">
+                <img src="../img/logo/foxs/basket.png" alt="1" >
+              </li>
+              <li class="img_list_item">
+                <img src="../img/logo/foxs/favorites.png" alt="2" >
+              </li>
+              <li class="img_list_item">
+                <img src="../img/logo/foxs/search.png" alt="3" >
+              </li>
+            </ul>
 
+            <div class="selected_img-block" style="height: 400px;">0</div>
+          </div>
+
+          <div class="product_title_content">
+            <!-- about product desription -->
+            <ul class="product_description_list">
+              <li class="product_description_item ">
+                <h1 class="product_name">Lorem ipsum dolor sit amet.</h1>
+              </li>
+              <li class="product_description_item product_star">* * * * <p><span>4</span>/5</p>
+              </li>
+              <div class="product_price_list">
+                <li class="product_price_item">
+                  <p class="product_newPrice">350 000 sum</p>
+                </li>
+                <li class="product_price_item">
+                  <p class="product_oldPrice">450 000 sum</p>
+                </li>
+                <li class="product_price_item">
+                  <p class="product_discount">-50%</p>
+                </li>
+              </div>
+              <li class="product_description_item">
+                <p class="product_fullname">
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione tempora alias nisi laboriosam
+                  expedita earum obcaecati ipsa, repellendus ea adipisci repellat dignissimos quod veniam, qui excepturi
+                  quam sequi id laudantium!
+                </p>
+              </li>
+            </ul>
+
+            <!-- selecter color -->
+            <div class="">
+              <h1 class="block_name">Select Color</h1>
+              <ul class="selected_color_list">
+                <li class="selected_color_item dark_brown">
+
+                </li>
+                <li class="selected_color_item dark_birch"></li>
+                <li class="selected_color_item dark_blue"></li>
+              </ul>
+            </div>
+
+            <!-- choose size -->
+            <div class="">
+              <h1 class="block_name">Choose Size</h1>
+              <ul class="selected_Size_list">
+                <li class="selected_Size_item">small</li>
+                <li class="selected_Size_item">medium</li>
+                <li class="selected_Size_item">large</li>
+                <li class="selected_Size_item">X-large</li>
+                <li class="selected_Size_item">2X-large</li>
+                <li class="selected_Size_item">3X-large</li>
+              </ul>
+            </div>
+
+            <!-- btn block -->
+            <div class="btn_wrapper">
+              <div class="btn_oneMore">
+                <button class="btn_oneMore-minus">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                    <rect x="2" y="7" width="12" height="1.5" rx="0" fill="currentColor" />
+                  </svg>
+                </button>
+                <p class="btn_oneMore-count">0</p>
+                <button class="btn_oneMore-plus">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 24" fill="none">
+                    <rect x="2" y="10" width="12" height="1.5" rx="0" fill="currentColor" />
+                    <rect x="7.25" y="4.7" width="1.5" height="12" rx="0" fill="currentColor" />
+                  </svg>
+                </button>
+              </div>
+              <button class="add_cart">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
   </main>
 
@@ -376,21 +466,15 @@
 <!-- CONNECTION LIBRARY || СОЕДЕННЁНЫЕ БИБЛИОТЕКА -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-<!-- leaflet script -->
-<!-- <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-  integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script> -->
 
 <script src="../main.js"></script>
-
 <script src="../js/header/categoreSlider.js"></script>
-
 <script src="../js/navbar/navbar.js"></script>
-
 <script src="../js/navbar/favorites.js"></script>
-<!-- <script src="../js/navbar/location.js"></script> -->
-
 <script src="../js/navbar/auth/logIn.js"></script>
 <script src="../js/navbar/auth/register.js"></script>
 <script src="../js/navbar/auth/fullname.js"></script>
+
+<script src="../js/product.js"></script>
 
 </html>
