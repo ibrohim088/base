@@ -3,9 +3,8 @@
   align-items: center;
   flex-wrap: wrap;
   gap: 10px;
-  border: 1px solid black;
   overflow-y: auto;
-  height: 550px;
+  height: 380px;
   scrollbar-width: none;
   -ms-overflow-style: none;
 
@@ -19,7 +18,7 @@
 
 @media (width < 580px) {
   .dialog_favorites_content {
-
+    height: 350px;
 
     .electronik_list_item {
       flex: 0 1 calc(50% - 10px);
