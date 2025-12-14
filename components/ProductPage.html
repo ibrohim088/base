@@ -1,11 +1,396 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <!-- UI desing -->
+  <link rel="stylesheet" href="../style/Ui/select.css">
+  <link rel="stylesheet" href="../style/UI/categoryIcon.css">
+
+  <!-- dialog modal style import -->
+  <link rel="stylesheet" href="../style/dialog/empty-dialog.css">
+  <link rel="stylesheet" href="../style/dialog/categoryDialog.css">
+  <link rel="stylesheet" href="../style/dialog/locationDialog.css">
+  <link rel="stylesheet" href="../style/dialog/favoritesDialog.css">
+  <link rel="stylesheet" href="../style/dialog/authDialog.css">
+
+  <!-- header style import -->
+  <link rel="stylesheet" href="../style/header.css">
+
+  <!-- navbar style import -->
+  <link rel="stylesheet" href="../style/navbar.css">
+
+  <!-- section style import -->
+  <link rel="stylesheet" href="../style/main.css">
+
+  <!-- footer style import -->
+  <link rel="stylesheet" href="../style/footer.css">
+
+  <!-- UI main dialog -->
+  <link rel="stylesheet" href="../style/UI/dialog.css">
+  <link rel="stylesheet" href="../index.css">
+
+  <!-- slick slider link style -->
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+
+  <!-- leaflet link style -->
+  <!-- <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" /> -->
+
+  <title>ShopSamrt</title>
 </head>
+
+<style>
+</style>
+
 <body>
-  prodact page
+  <header>
+    <nav>
+      <div class="nav_content container">
+        <a href="/" class="shopsmart_logo">
+          <img class="shopsmart_logo" src="../img/logo/ShopSmart_text.png" alt="">
+        </a>
+        <div class="nav_input_box">
+          <input class="input" type="text" placeholder="Search product..." autofocus>
+          <img style="cursor: pointer;" class="searchSVG_IMG" src="../img/svg/icons/search.svg" alt="">
+        </div>
+        <div class="overlay"></div>
+        <ul class="nav_list">
+          <li class="nav_list_item category_item">
+            <img src="../img/svg/icons/categoryIcon.svg" alt="">
+            Category
+          </li>
+          <li class="nav_list_item basket_item">
+            <img class="basketSVG_IMG" src="../img/svg/icons/basket.svg" alt="">
+            Basket
+          </li>
+          <li class="nav_list_item favorites_item">
+            <img class="heartSVG_IMG" src="../img/svg/icons/heart.svg" alt="">
+            Favorites
+          </li>
+          <li class="nav_list_item location_item">
+            <img class="mapMarkerSVG_IMG" src="../img/svg/icons/mapMarker.svg" alt="">
+            Location
+          </li>
+        </ul>
+        <div class="btn_wrapper">
+          <select class="nav_list_item_select language_item" name="lan" required>
+            <option value="eng">EN</option>
+            <option value="ru">RU</option>
+            <option value="uz">UZ</option>
+          </select>
+
+          <button class="nav_logIn">
+            <p>Log In</p>
+            <img class="logInSVG_IMG" src="../img/svg/icons/logIn.svg" alt="">
+          </button>
+
+          <button class="burgerMenu">
+            <img class="logInSVG_IMG" src="../img/svg/icons/burgerMenu.svg" alt="">
+          </button>
+        </div>
+      </div>
+
+      <!-- ===================== dialog ===================== -->
+      <!-- category dialog modal -->
+      <dialog class="category_dialog empty-dialog">
+        <div class="empty_dialog_title">
+          <h2>Category</h2>
+
+          <button class="clouseCategoryDialog empty-dialog_close">
+            <img src="../img/svg/icons/cancel.svg" alt="">
+          </button>
+        </div>
+
+        <div class="dialog_category_content">
+          <div class="empty-product_item-error">
+            <img src="/img/logo/foxs/category.png" alt="">
+            <h1>There is nothing in the category</h1>
+          </div>
+        </div>
+      </dialog>
+
+      <!-- basket dialog block -->
+      <dialog class="basket_dialog empty-dialog">
+        <div class="empty_dialog_title">
+          <h2>Basket</h2>
+
+          <button class="clouseBasketDialog empty-dialog_close">
+            <img src="../img/svg/icons/cancel.svg" alt="">
+          </button>
+        </div>
+
+        <div class="dialog_basket_content">
+          <div class="empty-product_item-error">
+            <img src="/img/logo/foxs/basket.png" alt="">
+            <h1>There is nothing in the cart</h1>
+          </div>
+        </div>
+      </dialog>
+
+      <!-- Favorites dialog block -->
+      <dialog class="favorites_dialog empty-dialog">
+        <div class="empty_dialog_title">
+          <h2>Favorites</h2>
+
+          <button class="clouseFavoritesDialog empty-dialog_close">
+            <img src="../img/svg/icons/cancel.svg" alt="">
+          </button>
+        </div>
+
+        <div class="dialog_favorites_content">
+          <div class="empty-product_item-error">
+            <img src="/img/logo/foxs/favorites.png" alt="">
+            <h1>There is nothing in the favorites</h1>
+          </div>
+        </div>
+      </dialog>
+
+      <!-- Location dialog block -->
+      <dialog class="location_dialog empty-dialog">
+        <div class="empty_dialog_title">
+          <h2>Location</h2>
+          <button class="clouseLocationDialog empty-dialog_close">
+            <img src="../img/svg/icons/cancel.svg" alt="">
+          </button>
+        </div>
+
+        <div class="dialog_location_content">
+
+          <div class="dialog_location_iframe_block">
+            <!-- <div class="map" id="map"></div> -->
+
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1536049.2008263702!2d69.9580706!3d41.241464650000005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38afbcaa73f2ce4d%3A0x57f19ae913e2f367!2z0KLQsNGI0LrQtdC90YLRgdC60LDRjyDQvtCx0LvQsNGB0YLRjA!5e0!3m2!1sru!2s!4v1764148943542!5m2!1sru!2s"
+              style="border:0;" allowfullscreen="" loading="fast" referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+          <form class="dialog_form">
+            <div class="dialog_form_wrapper">
+              <h2 class="dialog_form_title">Select pick-up item</h2>
+              <select class="dialog_form_select" name="city" id="city">
+                <option value="sergeli">Sergeli</option>
+                <option value="yunsobot">Yunsobot</option>
+                <option value="chilonzor">Chilonzor</option>
+                <option value="yashnabod">Yashnabod</option>
+              </select>
+
+              <!-- work time -->
+              <h2 class="dialog_form_title">Work Time</h2>
+              <ul class="dialog_form_list">
+                <li class="dialog_form_item">Monday: <p>10:00 - 20:00</p>
+                </li>
+                <li class="dialog_form_item">Tuesday: <p>10:00 - 20:00</p>
+                </li>
+                <li class="dialog_form_item">Wednesday: <p>10:00 - 20:00</p>
+                </li>
+                <li class="dialog_form_item">Thursday: <p>10:00 - 20:00</p>
+                </li>
+                <li class="dialog_form_item">Friday: <p>10:00 - 20:00</p>
+                </li>
+                <li class="dialog_form_item">Saturday: <p>10:00 - 20:00</p>
+                </li>
+                <li class="dialog_form_item">Sunday: <p>10:00 - 17:00</p>
+                </li>
+              </ul>
+            </div>
+
+            <button class="dialog_form_btn empty-btn">Next</button>
+          </form>
+        </div>
+      </dialog>
+
+      <!-- logIn dialog block -->
+      <dialog class="logIn_dialog empty-auth_dialog empty-dialog">
+        <div class="empty_dialog_title">
+          <h2></h2>
+
+          <button class="clouseLocationDialog empty-dialog_close">
+            <img src="../img/svg/icons/cancel.svg" alt="">
+          </button>
+        </div>
+
+        <h1 class="empty-auth_title">Log In in Shop Smart</h1>
+
+        <form class="empty-auth_form" autocomplete="off">
+          <input class="logInInput" type="tel" placeholder="+998 00 - 000 - 00" value="+998" maxlength="17">
+          <button class="logIn_btn empty-btn form_auth-btn">Submit</button>
+        </form>
+
+        <p class="empty-auth_text">If you already Existed <span class="nav_register">register</span></p>
+      </dialog>
+
+      <!-- register dialog block -->
+      <dialog class="register_dialog empty-auth_dialog empty-dialog">
+        <div class="empty_dialog_title">
+          <h2></h2>
+
+          <button class="clouseLocationDialog empty-dialog_close">
+            <img src="../img/svg/icons/cancel.svg" alt="">
+          </button>
+        </div>
+
+        <h1 class="empty-auth_title">Register in Shop Smart</h1>
+
+        <form class="empty-auth_form" autocomplete="off">
+          <!-- <label for="fullname">Full Name</label> -->
+          <input class="fullname" type="text" id="fullname" placeholder="Fullname" autofocus>
+
+          <!-- <label for="birthday">Date</label> -->
+          <input class="inputDate" type="datetime" id="birthday" placeholder="DD.MM.YYYY" maxlength="10">
+
+          <!-- <label for="email">Email</label> -->
+          <input type="email" id="email" placeholder="Email" pattern="+@gamil.com">
+
+          <!-- <label for="password">Password</label> -->
+          <input type="password" id="password" placeholder="Password" maxlength="8">
+
+          <!-- <label for="phone">Phone Number</label> -->
+          <input class="logInInput" type="tel" value="+998 " maxlength="17">
+
+          <button class="register_btn empty-btn form_auth-btn">Submit</button>
+        </form>
+      </dialog>
+    </nav>
+  </header>
+
+  <main class="main container">
+    <h1>Product Page</h1>
+
+    <section class="products_section">
+
+    </section>
+  </main>
+
+  <footer class="footer container">
+    <div class="footer_content">
+      <div class="footer_top_content">
+        <!-- about list -->
+        <ul class="footer_empty-list">
+          <li class="footer_empty-item">
+            <h1>About</h1>
+          </li>
+          <li class="footer_empty-item">
+            <a href="../page/about/pickupPoint.html">
+              Pickup point
+            </a>
+          </li>
+          <li class="footer_empty-item">
+            <a href="../page/about/jobOpenings.html">
+              Job openings
+            </a>
+          </li>
+        </ul>
+
+        <!-- to user list -->
+        <ul class="footer_empty-list">
+          <li class="footer_empty-item">
+            <h1>To User</h1>
+          </li>
+          <li class="footer_empty-item">
+            <a href="../page/toUser/Contact.html">
+              Contact us
+            </a>
+          </li>
+          <li class="footer_empty-item">
+            <a href="../page/toUser/Q&A.html">
+              Q & A (Question and Answers)
+            </a>
+          </li>
+        </ul>
+
+        <!-- For businesses -->
+        <ul class="footer_empty-list">
+          <li class="footer_empty-item">
+            <h1>For businesses</h1>
+          </li>
+          <li class="footer_empty-item">
+            <a href="../page/businesses/sell.html">
+              Sell on ShopSamrt
+            </a>
+          </li>
+          <li class="footer_empty-item">
+            <a href="../page/businesses/sellerLogin.html">
+              Seller login
+            </a>
+          </li>
+          <li class="footer_empty-item">
+            <a href="../page/businesses/openPoint.html">
+              Open a pickup point
+            </a>
+          </li>
+        </ul>
+
+        <!-- Download the app -->
+        <ul class="footer_empty-list">
+          <li class="footer_empty-item">
+            <h1>Download the app</h1>
+          </li>
+          <li class="footer_empty-item empty-dow">
+            <a href="../page/download/appStory.html">
+              <img src="../img/svg/download/appStory.svg" alt="">
+            </a>
+            <a href="../page/download/playMarket.html">
+              <img src="../img/svg/download/playMarket.svg" alt="">
+            </a>
+          </li>
+
+          <li class="footer_empty-item">
+            <h1>ShopSamrt on social media</h1>
+          </li>
+          <li class="footer_empty-item empty-item_social">
+            <a href="./telegram">
+              <img src="../img/svg/sochialMedia/telegram.svg" alt="">
+            </a>
+            <a href="./youtube">
+              <img src="../img/svg/sochialMedia/youtube.svg" alt="">
+            </a>
+            <a href="./instagram">
+              <img src="../img/svg/sochialMedia/instagram.svg" alt="">
+            </a>
+            <a href="./facebook">
+              <img src="../img/svg/sochialMedia/facebook.svg" alt="">
+            </a>
+          </li>
+        </ul>
+
+      </div>
+
+      <div class="footer_bottom_content">
+        <ul class="footer_bottom_list">
+          <li class="footer_bottom__list_item">
+            Privacy Policy User Agreement
+          </li>
+
+          <li class="footer_bottom__list_item">
+            «2025© OOO «ShopSmart». All rights reserved» 1.0.0
+          </li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
 </body>
+
+<!-- CONNECTION LIBRARY || СОЕДЕННЁНЫЕ БИБЛИОТЕКА -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<!-- leaflet script -->
+<!-- <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+  integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script> -->
+
+<script src="../main.js"></script>
+
+<script src="../js/header/categoreSlider.js"></script>
+
+<script src="../js/navbar/navbar.js"></script>
+
+<script src="../js/navbar/favorites.js"></script>
+<!-- <script src="../js/navbar/location.js"></script> -->
+
+<script src="../js/navbar/auth/logIn.js"></script>
+<script src="../js/navbar/auth/register.js"></script>
+<script src="../js/navbar/auth/fullname.js"></script>
+
 </html>
