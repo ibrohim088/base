@@ -566,9 +566,12 @@ function renderProduct(arr) {
 
         if (this.classList.contains('is-active')) {
           const product = this.closest('.electronik_list_item')
-          favorites.push(product.outerHTML)
+          
+          if (!favorites.some(card => card.includes(`data-id="${id}"`))) { 
+            favorites.push(product.outerHTML)
+          }
         } else {
-          favorites = favorites.filter(card => !card.includes(`data - id="${id}"`))
+          favorites = favorites.filter(card => !card.includes(`data-id="${id}"`))
         }
 
         showFavorites()
