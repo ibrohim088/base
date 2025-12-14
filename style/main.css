@@ -11,11 +11,11 @@
   align-items: center;
 
   img {
-    /* border: 1px solid black; */
+    border: 1px solid black;
     width: 190px;
     height: 225px;
     object-fit: cover;
-    object-position: bottom;
+    object-position: top left right;
     /* object-position: 0; */
   }
 
