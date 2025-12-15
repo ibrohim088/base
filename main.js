@@ -546,10 +546,10 @@ function renderProduct(arr) {
     const favoriteBtn = document.querySelectorAll('.empty-product_favorites');
     const clearFavorites = document.querySelector('.clearFavorites')
 
-
-    // let favorites = []
+    // Пытается ВЗЯТЬ данные (но ничего не сохраняет!)
     let favorites = JSON.parse(localStorage.getItem('favorites')) || []
 
+    // СОХРАНЯЕТ данные в localStorage
     const saveFavorites = () => localStorage.setItem('favorites', JSON.stringify(favorites))
 
     const showFavorites = () => favDialogContent.innerHTML = favorites.length
