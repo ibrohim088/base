@@ -133,9 +133,13 @@
         <div class="empty_dialog_title">
           <h2>Favorites</h2>
 
-          <button class="clouseFavoritesDialog empty-dialog_close">
-            <img src="../img/svg/icons/cancel.svg" alt="">
-          </button>
+          <div class="btn_wrapper">
+            <button class="clearFavorites">Clear</button>
+
+            <button class="clouseFavoritesDialog empty-dialog_close">
+              <img src="/img/svg/icons/cancel.svg" alt="">
+            </button>
+          </div>
         </div>
 
         <div class="dialog_favorites_content">
@@ -260,20 +264,21 @@
     <section class="products_section">
       <div class="container">
         <div class="product_wrapper">
+          <!-- style="height: 400px;" -->
           <div class="product_imgs_content">
             <ul class="img_list">
               <li class="img_list_item is-selected_img">
-                <img src="../img/logo/foxs/basket.png" alt="1" >
+                <img src="../img/logo/foxs/basket.png" alt="1">
               </li>
               <li class="img_list_item">
-                <img src="../img/logo/foxs/favorites.png" alt="2" >
+                <img src="../img/logo/foxs/favorites.png" alt="2">
               </li>
               <li class="img_list_item">
-                <img src="../img/logo/foxs/search.png" alt="3" >
+                <img src="../img/logo/foxs/search.png" alt="3">
               </li>
             </ul>
-
-            <div class="selected_img-block" style="height: 400px;">0</div>
+            <!-- style="width: 350px;" -->
+            <div class="selected_img-block">0</div>
           </div>
 
           <div class="product_title_content">
@@ -282,7 +287,8 @@
               <li class="product_description_item ">
                 <h1 class="product_name">Lorem ipsum dolor sit amet.</h1>
               </li>
-              <li class="product_description_item product_star">* * * * <p><span>4</span>/5</p>
+              <li class="product_description_item product_star"><img src="../img/star/4.png" alt="">
+                <p><span>4</span>/5</p>
               </li>
               <div class="product_price_list">
                 <li class="product_price_item">

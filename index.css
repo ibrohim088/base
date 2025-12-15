@@ -8,8 +8,13 @@
 
 body {
   padding: 10px;
-  padding-bottom: 75px;
   overscroll-behavior-y: none;
+}
+
+@media(width < 550px) {
+  body {
+    padding-bottom: 75px;
+  }
 }
 
 ul {

@@ -543,25 +543,38 @@ function renderProduct(arr) {
 
     // ? FAVORITIES  =============================================================================================================
     // ? FAVORITIES  =============================================================================================================
-
-
     const favoriteBtn = document.querySelectorAll('.empty-product_favorites');
-    let favorites = []
+    const clearFavorites = document.querySelector('.clearFavorites')
 
-    const showFavorites = () => favDialogContent.innerHTML = favorites.join('')
 
-    favoriteBtn.forEach((btn) => {
+    // let favorites = []
+    let favorites = JSON.parse(localStorage.getItem('favorites')) || []
+
+    const saveFavorites = () => localStorage.setItem('favorites', JSON.stringify(favorites))
+
+    const showFavorites = () => favDialogContent.innerHTML = favorites.length
+      ? favorites.join('')
+      : `<div class="empty-product_item-error">
+            <img src="/img/logo/foxs/favorites.png" alt="">
+            <h1>There is nothing in the favorites</h1>
+          </div>`
+
+    favoriteBtn.forEach(btn => {
       // ! В JavaScript любой атрибут data-* попадает в объект dataset
       const id = btn.dataset.id
       console.log(id);
 
+      if (favorites.some(card => card.includes(`data-id="${id}"`))) {
+        btn.classList.add('is-active')
+      }
+
       btn.addEventListener('click', function (e) {
         e.preventDefault()
         this.classList.toggle('is-active');
+        const product = this.closest('.electronik_list_item')
+
 
         if (this.classList.contains('is-active')) {
-          const product = this.closest('.electronik_list_item')
-
           if (!favorites.some(card => card.includes(`data-id="${id}"`))) {
             favorites.push(product.outerHTML)
           }
@@ -569,11 +582,22 @@ function renderProduct(arr) {
           favorites = favorites.filter(card => !card.includes(`data-id="${id}"`))
         }
 
+        saveFavorites()
         showFavorites()
       });
     })
 
+    clearFavorites.addEventListener('click', () => {
+      favorites = []
+      localStorage.removeItem('favorites')
+      showFavorites()
+
+      favoriteBtn.forEach(btn => btn.classList.remove('is-active'))
+    })
+
+
     showFavorites()
+
 
     // ? FAVORITIES  =============================================================================================================
     // ? FAVORITIES  =============================================================================================================

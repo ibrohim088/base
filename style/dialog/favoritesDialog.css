@@ -13,6 +13,16 @@
   }
 }
 
+
+.clearFavorites {
+  cursor: pointer;
+  border: 1px solid #0000002A;
+  outline: none;
+  padding: 10px 15px 8px;
+  border-radius: 15px;
+  background: none;
+}
+
 /* Убираем скролл-бар для Chrome, Safari и Opera */
 /* .dialog_favorites_content */
 
