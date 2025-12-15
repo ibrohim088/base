@@ -91,6 +91,26 @@ favorites.addEventListener('click', () => {
   favoritesDialog.showModal()
   document.body.style.overflow = 'hidden'
 
+  let fav = JSON.parse(localStorage.getItem('favorites')) || []
+  let html = fav.length ? fav.join('') : `
+    <div class="empty-product_item-error">
+      <img src="/img/logo/foxs/favorites.png" alt="">
+      <h1>There is nothing in the favorites</h1>
+    </div>`
+
+  document.querySelector('.dialog_favorites_content').innerHTML = html
+
+  document.querySelectorAll('.empty-product_favorites').forEach(btn => {
+    const id = btn.dataset.id
+    if (id && fav.some(card => card.includes(`data-id="${id}"`))) {
+      btn.classList.add('is-active')
+    } else {
+      btn.classList.remove('is-active')
+    }
+  })
+
+ 
+
   categoryDialog.close()
   locationDialog.close()
   basketDialog.close()

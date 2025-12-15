@@ -542,29 +542,29 @@ function renderProduct(arr) {
     // ? FAVORITIES  =============================================================================================================
     // ? FAVORITIES  =============================================================================================================
 
-    // ? Получаем данные из localStorage
+    // Получаем данные из localStorage
     let favorites = JSON.parse(localStorage.getItem('favorites')) || []
 
-    // ? Сохраняем в localStorage
+    // Сохраняем в localStorage
     const saveFavorites = () => {
       localStorage.setItem('favorites', JSON.stringify(favorites))
     }
 
-    // ? Показываем избранное
+    // Показываем избранное
     const showFavorites = () => {
       const content = favorites.length
         ? favorites.join('')
         : `<div class="empty-product_item-error">
-        <img src="/img/logo/foxs/favorites.png" alt="">
-        <h1>There is nothing in the favorites</h1>
-      </div>`
+            <img src="/img/logo/foxs/favorites.png" alt="">
+            <h1>There is nothing in the favorites</h1>
+          </div>`
 
       document.querySelectorAll('.dialog_favorites_content').forEach(el => {
         el.innerHTML = content
       })
     }
 
-    // ? Обновляем состояние всех кнопок
+    // Обновляем состояние всех кнопок
     const updateButtons = () => {
       document.querySelectorAll('.empty-product_favorites').forEach(btn => {
         const id = btn.dataset.id
@@ -576,7 +576,7 @@ function renderProduct(arr) {
       })
     }
 
-    // ? Кнопки избранного
+    // Кнопки избранного
     document.querySelectorAll('.empty-product_favorites').forEach(btn => {
       const id = btn.dataset.id
 
@@ -600,9 +600,10 @@ function renderProduct(arr) {
       })
     })
 
-    // ? Кнопки очистки
+    // Кнопки очистки
     document.querySelectorAll('.clearFavorites').forEach(btn => {
       btn.addEventListener('click', () => {
+        
         favorites = []
         localStorage.removeItem('favorites')
         saveFavorites()
@@ -611,10 +612,9 @@ function renderProduct(arr) {
       })
     })
 
-    // ? Инициализация при загрузке
+    // Инициализация при загрузке
     showFavorites()
     updateButtons()
-
 
     // ? FAVORITIES  =============================================================================================================
     // ? FAVORITIES  =============================================================================================================
