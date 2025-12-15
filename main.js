@@ -486,8 +486,6 @@ const electronik = [
   },
 ]
 
-const favDialogContent = document.querySelector('.dialog_favorites_content')
-
 const electronikList = document.querySelector('.electronik_list')
 const input = document.querySelector('.input')
 
@@ -543,60 +541,79 @@ function renderProduct(arr) {
 
     // ? FAVORITIES  =============================================================================================================
     // ? FAVORITIES  =============================================================================================================
-    const favoriteBtn = document.querySelectorAll('.empty-product_favorites');
-    const clearFavorites = document.querySelector('.clearFavorites')
 
-    // Пытается ВЗЯТЬ данные (но ничего не сохраняет!)
+    // ? Получаем данные из localStorage
     let favorites = JSON.parse(localStorage.getItem('favorites')) || []
 
-    // СОХРАНЯЕТ данные в localStorage
-    const saveFavorites = () => localStorage.setItem('favorites', JSON.stringify(favorites))
+    // ? Сохраняем в localStorage
+    const saveFavorites = () => {
+      localStorage.setItem('favorites', JSON.stringify(favorites))
+    }
 
-    const showFavorites = () => favDialogContent.innerHTML = favorites.length
-      ? favorites.join('')
-      : `<div class="empty-product_item-error">
-            <img src="/img/logo/foxs/favorites.png" alt="">
-            <h1>There is nothing in the favorites</h1>
-          </div>`
+    // ? Показываем избранное
+    const showFavorites = () => {
+      const content = favorites.length
+        ? favorites.join('')
+        : `<div class="empty-product_item-error">
+        <img src="/img/logo/foxs/favorites.png" alt="">
+        <h1>There is nothing in the favorites</h1>
+      </div>`
 
-    favoriteBtn.forEach(btn => {
-      // ! В JavaScript любой атрибут data-* попадает в объект dataset
+      document.querySelectorAll('.dialog_favorites_content').forEach(el => {
+        el.innerHTML = content
+      })
+    }
+
+    // ? Обновляем состояние всех кнопок
+    const updateButtons = () => {
+      document.querySelectorAll('.empty-product_favorites').forEach(btn => {
+        const id = btn.dataset.id
+        if (favorites.some(card => card.includes(`data-id="${id}"`))) {
+          btn.classList.add('is-active')
+        } else {
+          btn.classList.remove('is-active')
+        }
+      })
+    }
+
+    // ? Кнопки избранного
+    document.querySelectorAll('.empty-product_favorites').forEach(btn => {
       const id = btn.dataset.id
-      console.log(id);
-
-      if (favorites.some(card => card.includes(`data-id="${id}"`))) {
-        btn.classList.add('is-active')
-      }
 
       btn.addEventListener('click', function (e) {
         e.preventDefault()
-        this.classList.toggle('is-active');
+
         const product = this.closest('.electronik_list_item')
+        const exists = favorites.some(card => card.includes(`data-id="${id}"`))
 
-
-        if (this.classList.contains('is-active')) {
-          if (!favorites.some(card => card.includes(`data-id="${id}"`))) {
-            favorites.push(product.outerHTML)
-          }
-        } else {
+        if (exists) {
+          // Удаляем из избранного
           favorites = favorites.filter(card => !card.includes(`data-id="${id}"`))
+        } else {
+          // Добавляем в избранное
+          favorites.push(product.outerHTML)
         }
 
         saveFavorites()
         showFavorites()
-      });
+        updateButtons()
+      })
     })
 
-    clearFavorites.addEventListener('click', () => {
-      favorites = []
-      localStorage.removeItem('favorites')
-      showFavorites()
-
-      favoriteBtn.forEach(btn => btn.classList.remove('is-active'))
+    // ? Кнопки очистки
+    document.querySelectorAll('.clearFavorites').forEach(btn => {
+      btn.addEventListener('click', () => {
+        favorites = []
+        localStorage.removeItem('favorites')
+        saveFavorites()
+        showFavorites()
+        updateButtons()
+      })
     })
 
-
+    // ? Инициализация при загрузке
     showFavorites()
+    updateButtons()
 
 
     // ? FAVORITIES  =============================================================================================================
