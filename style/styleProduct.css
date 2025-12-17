@@ -194,11 +194,14 @@
   cursor: pointer;
   transition: all .3s ease;
 
-  &:active,
-  &:hover {
+  /* &:active {
     background: #233c66;
     color: #91c153;
-  }
+  } */
+}
+.active_add-cart {
+  background: #233c66;
+  color: #91c153;
 }
 
 

@@ -68,6 +68,8 @@ plus.addEventListener('click', () => {
 
 // ? selected img ==========================================================================================================
 // ? selected img ==========================================================================================================
+
+
 const imgItems = document.querySelectorAll('.img_list_item')
 const selectedImgBLock = document.querySelector('.selected_img-block')
 
@@ -79,10 +81,23 @@ imgItems.forEach(imgItem => imgItem.addEventListener('click', () => {
     imgItem.classList.remove('is-selected_img')
     return
   }
-  
+
   imgItems.forEach(el => el.classList.remove('is-selected_img'))
   imgItem.classList.add('is-selected_img')
 
   const img = imgItem.querySelector('img')
   selectedImgBLock.innerHTML = `<img src="${img.src}">`
 }))
+
+
+// ? is-active_add-cart img ==========================================================================================================
+// ? is-active_add-cart img ==========================================================================================================
+
+const isActiveAddCart = document.querySelector('.add_cart')
+isActiveAddCart.addEventListener('click', () => {
+  if (isActiveAddCart.classList.contains('active_add-cart')) {
+    isActiveAddCart.classList.remove('active_add-cart')
+  } else { 
+    isActiveAddCart.classList.add('active_add-cart')
+  }
+})
