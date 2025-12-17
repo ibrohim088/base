@@ -559,8 +559,8 @@ function renderProduct(arr) {
             <h1>There is nothing in the favorites</h1>
           </div>`
 
-      document.querySelectorAll('.dialog_favorites_content').forEach(el => {
-        el.innerHTML = content
+      document.querySelectorAll('.dialog_favorites_content').forEach(dialogFavContent => {
+        dialogFavContent.innerHTML = content
       })
     }
 
@@ -583,6 +583,8 @@ function renderProduct(arr) {
       btn.addEventListener('click', function (e) {
         e.preventDefault()
 
+        console.log('click btn heart icon');
+
         const product = this.closest('.electronik_list_item')
         const exists = favorites.some(card => card.includes(`data-id="${id}"`))
 
@@ -603,19 +605,20 @@ function renderProduct(arr) {
     // Кнопки очистки
     document.querySelectorAll('.clearFavorites').forEach(btn => {
       btn.addEventListener('click', () => {
-        
+        console.log('click btn clear favorites');
+
         favorites = []
         localStorage.removeItem('favorites')
         saveFavorites()
         showFavorites()
         updateButtons()
       })
+      
     })
 
     // Инициализация при загрузке
     showFavorites()
     updateButtons()
-
     // ? FAVORITIES  =============================================================================================================
     // ? FAVORITIES  =============================================================================================================
   }, 1500)

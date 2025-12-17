@@ -23,8 +23,7 @@
   background: none;
 }
 
-/* Убираем скролл-бар для Chrome, Safari и Opera */
-/* .dialog_favorites_content */
+
 
 @media (width < 580px) {
   .dialog_favorites_content {

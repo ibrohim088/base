@@ -46,11 +46,11 @@ category.addEventListener('click', () => {
   categoryDialog.showModal()
   document.body.style.overflow = 'hidden'
 
-  locationDialog.close()
-  basketDialog.close()
-  favoritesDialog.close()
-  logInDialog.close()
-  registerDialog.close()
+  locationDialog?.close()
+  basketDialog?.close()
+  favoritesDialog?.close()
+  logInDialog?.close()
+  registerDialog?.close()
 })
 
 
@@ -61,11 +61,11 @@ locations.addEventListener('click', () => {
   locationDialog.showModal()
   document.body.style.overflow = 'hidden'
 
-  categoryDialog.close()
-  basketDialog.close()
-  favoritesDialog.close()
-  logInDialog.close()
-  registerDialog.close()
+  categoryDialog?.close()
+  basketDialog?.close()
+  favoritesDialog?.close()
+  logInDialog?.close()
+  registerDialog?.close()
 })
 
 
@@ -77,11 +77,11 @@ basket.addEventListener('click', () => {
   basketDialog.showModal()
   document.body.style.overflow = 'hidden'
 
-  categoryDialog.close()
-  locationDialog.close()
-  favoritesDialog.close()
-  logInDialog.close()
-  registerDialog.close()
+  categoryDialog?.close()
+  locationDialog?.close()
+  favoritesDialog?.close()
+  logInDialog?.close()
+  registerDialog?.close()
 })
 
 // ? basket modal open function ============================================================
@@ -109,13 +109,38 @@ favorites.addEventListener('click', () => {
     }
   })
 
- 
+  // clearAllFav
+  // Используйте querySelector вместо querySelectorAll (если кнопка одна)
+  const clearBtn = document.querySelector('.clearFavorites')
+  if (clearBtn) {
+    clearBtn.addEventListener('click', () => {
+      console.log('click btn clear favorites')
 
-  categoryDialog.close()
-  locationDialog.close()
-  basketDialog.close()
-  logInDialog.close()
-  registerDialog.close()
+      // Удаляем из localStorage
+      localStorage.removeItem('favorites')
+
+      // Обновляем контент модального окна
+      const dialogContent = document.querySelector('.dialog_favorites_content')
+      if (dialogContent) {
+        dialogContent.innerHTML = `
+        <div class="empty-product_item-error">
+          <img src="/img/logo/foxs/favorites.png" alt="">
+          <h1>There is nothing in the favorites</h1>
+        </div>`
+      }
+
+      // Обновляем все кнопки сердечек на странице
+      document.querySelectorAll('.empty-product_favorites').forEach(heartBtn => {
+        heartBtn.classList.remove('is-active')
+      })
+    })
+  }
+  
+  categoryDialog?.close()
+  locationDialog?.close()
+  basketDialog?.close()
+  logInDialog?.close()
+  registerDialog?.close()
 })
 
 
@@ -126,11 +151,11 @@ logIn.addEventListener('click', () => {
   logInDialog.showModal()
   document.body.style.overflow = 'hidden'
 
-  categoryDialog.close()
-  locationDialog.close()
-  basketDialog.close()
-  favoritesDialog.close()
-  registerDialog.close()
+  categoryDialog?.close()
+  locationDialog?.close()
+  basketDialog?.close()
+  favoritesDialog?.close()
+  registerDialog?.close()
 })
 
 // ? register modal open function ============================================================
@@ -140,11 +165,11 @@ register.addEventListener('click', () => {
   registerDialog.showModal()
   document.body.style.overflow = 'hidden'
 
-  categoryDialog.close()
-  locationDialog.close()
-  basketDialog.close()
-  favoritesDialog.close()
-  logInDialog.close()
+  categoryDialog?.close()
+  locationDialog?.close()
+  basketDialog?.close()
+  favoritesDialog?.close()
+  logInDialog?.close()
 })
 
 
