@@ -526,7 +526,7 @@ function renderProduct(arr) {
                 </div>
                 <li class="empty-price_item empty-new_price">${product.newPrice} sum</li>
               </ul>
-              <a href="./components/ProductPage.html">
+              <a href="./components/ProductPage.html?id=${index}">
                 <button class="empty-product_buy empty-btn">BUY</button>            
               </a>
             </div>
