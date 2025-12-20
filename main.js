@@ -32,7 +32,7 @@ const electronik = [
         count++
         res = str[i] + res
         if (count === 3 && i !== 0) {
-          count = 0
+          count = 0   
           res = ' ' + res
         }
       }
