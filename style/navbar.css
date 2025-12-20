@@ -1,13 +1,18 @@
+.nav_input_box-wrapper {
+  display: flex;
+  gap: 1em;
+}
+
 .nav_input_box {
-  /* max-width: 450px; */
   width: 500px;
   display: flex;
   align-items: center;
   gap: 10px;
-  padding: 0 10px;
+  padding: 0 8px;
   background: #fff;
   border-radius: 8px;
   border: 1px solid #0000002A;
+
 
   input {
     width: 100%;
